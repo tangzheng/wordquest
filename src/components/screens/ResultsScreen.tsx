@@ -37,7 +37,7 @@ export function ResultsScreen() {
     }
   }, []); // Only on mount
 
-  // Confetti burst for 3 stars
+  // Confetti burst for 2+ stars (bigger for 3 stars, smaller for 2)
   useEffect(() => {
     if (state?.stars === 3) {
       const timer = setTimeout(() => {
@@ -46,6 +46,16 @@ export function ResultsScreen() {
           spread: 70,
           origin: { y: 0.3 },
           colors: ['#FF6B6B', '#4ECDC4', '#FFE66D', '#51CF66', '#A78BFA'],
+        });
+      }, 600);
+      return () => clearTimeout(timer);
+    } else if (state?.stars === 2) {
+      const timer = setTimeout(() => {
+        confetti({
+          particleCount: 40,
+          spread: 50,
+          origin: { y: 0.35 },
+          colors: ['#FFE66D', '#51CF66', '#4ECDC4'],
         });
       }, 600);
       return () => clearTimeout(timer);
@@ -126,24 +136,60 @@ export function ResultsScreen() {
         >
           <Card style={{ textAlign: 'center' }}>
             <div style={{ display: 'flex', gap: 'var(--space-xl)', justifyContent: 'center' }}>
-              <div>
-                <div style={{ fontSize: 'var(--font-size-2xl)', fontFamily: 'var(--font-heading)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
+                <div
+                  style={{
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(81,207,102,0.15)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: 'var(--font-size-2xl)',
+                    fontFamily: 'var(--font-heading)',
+                  }}
+                >
                   {correctCount}/{answers.length}
                 </div>
                 <div style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-text-light)' }}>
                   正确
                 </div>
               </div>
-              <div>
-                <div style={{ fontSize: 'var(--font-size-2xl)', fontFamily: 'var(--font-heading)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
+                <div
+                  style={{
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(78,205,196,0.15)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: 'var(--font-size-2xl)',
+                    fontFamily: 'var(--font-heading)',
+                  }}
+                >
                   {Math.round(accuracy * 100)}%
                 </div>
                 <div style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-text-light)' }}>
                   正确率
                 </div>
               </div>
-              <div>
-                <div style={{ fontSize: 'var(--font-size-2xl)', fontFamily: 'var(--font-heading)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
+                <div
+                  style={{
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(255,215,0,0.15)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: 'var(--font-size-2xl)',
+                    fontFamily: 'var(--font-heading)',
+                  }}
+                >
                   +{stars}
                 </div>
                 <div style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-text-light)' }}>
@@ -174,8 +220,12 @@ export function ResultsScreen() {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 'var(--space-sm)',
-                  padding: 'var(--space-sm) 0',
-                  borderBottom: i < answers.length - 1 ? '1px solid rgba(0,0,0,0.06)' : 'none',
+                  padding: 'var(--space-sm)',
+                  marginBottom: i < answers.length - 1 ? '4px' : '0',
+                  borderRadius: 'var(--radius-md)',
+                  backgroundColor: answer.correct
+                    ? 'rgba(81,207,102,0.08)'
+                    : 'rgba(255,135,135,0.08)',
                 }}
               >
                 <span style={{ fontSize: '20px' }}>
@@ -226,7 +276,12 @@ export function ResultsScreen() {
             color="transparent"
             textColor="var(--color-text-light)"
             fullWidth
-            style={{ boxShadow: 'none' }}
+            style={{
+              boxShadow: 'none',
+              border: '1.5px solid rgba(0,0,0,0.12)',
+              backgroundColor: 'rgba(0,0,0,0.02)',
+              borderRadius: 'var(--radius-lg)',
+            }}
           >
             回到首页
           </Button>

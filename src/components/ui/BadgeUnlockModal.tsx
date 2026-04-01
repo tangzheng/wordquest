@@ -45,6 +45,7 @@ export function BadgeUnlockModal({ badgeId, onClose }: BadgeUnlockModalProps) {
             position: 'fixed',
             inset: 0,
             backgroundColor: 'rgba(0,0,0,0.5)',
+            backdropFilter: 'blur(4px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -71,7 +72,18 @@ export function BadgeUnlockModal({ badgeId, onClose }: BadgeUnlockModalProps) {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.3, type: 'spring', stiffness: 300 }}
-              style={{ fontSize: '72px', marginBottom: 'var(--space-md)' }}
+              style={{
+                fontSize: '72px',
+                marginBottom: 'var(--space-md)',
+                background: 'radial-gradient(circle, rgba(255,215,0,0.15) 0%, transparent 70%)',
+                width: '120px',
+                height: '120px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                margin: '0 auto var(--space-md)',
+                borderRadius: '50%',
+              }}
             >
               {badge.icon}
             </motion.div>

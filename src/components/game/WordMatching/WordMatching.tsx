@@ -13,6 +13,7 @@ interface MatchCard {
   emoji?: string;
   isFlipped: boolean;
   isMatched: boolean;
+  justMatched?: boolean;
 }
 
 interface WordMatchingProps {
@@ -94,10 +95,21 @@ export function WordMatching({ words, onComplete }: WordMatchingProps) {
             setCards((prev) =>
               prev.map((c) =>
                 c.id === card1.id || c.id === card2.id
-                  ? { ...c, isMatched: true }
+                  ? { ...c, isMatched: true, justMatched: true }
                   : c
               )
             );
+
+            // Clear justMatched after pulse animation
+            setTimeout(() => {
+              setCards((prev) =>
+                prev.map((c) =>
+                  c.id === card1.id || c.id === card2.id
+                    ? { ...c, justMatched: false }
+                    : c
+                )
+              );
+            }, 500);
 
             const newMatchedPairs = new Set(matchedPairs).add(card1.wordId);
             setMatchedPairs(newMatchedPairs);
@@ -124,9 +136,17 @@ export function WordMatching({ words, onComplete }: WordMatchingProps) {
             }
           }, 300);
         } else {
-          // No match
+          // No match — shake then flip back
           setTimeout(() => {
             play('wrong');
+            // Shake the mismatched cards
+            setCards((prev) =>
+              prev.map((c) =>
+                newSelected.includes(c.id) ? { ...c, justMatched: false } : c
+              )
+            );
+          }, 600);
+          setTimeout(() => {
             setCards((prev) =>
               prev.map((c) =>
                 newSelected.includes(c.id) ? { ...c, isFlipped: false } : c
@@ -170,14 +190,37 @@ export function WordMatching({ words, onComplete }: WordMatchingProps) {
           maxWidth: '420px',
         }}
       >
-        {cards.map((card) => (
+        {cards.map((card) => {
+          const isMismatchShaking =
+            selectedCards.includes(card.id) &&
+            isProcessing &&
+            !card.isMatched &&
+            card.isFlipped;
+
+          return (
           <motion.div
             key={card.id}
             whileTap={!card.isFlipped && !card.isMatched ? { scale: 0.95 } : undefined}
+            animate={
+              card.justMatched
+                ? { scale: [1, 1.05, 1] }
+                : isMismatchShaking
+                ? { x: [0, -4, 4, -4, 4, 0] }
+                : { scale: 1 }
+            }
+            transition={
+              card.justMatched
+                ? { duration: 0.4 }
+                : isMismatchShaking
+                ? { duration: 0.4 }
+                : undefined
+            }
             onClick={() => handleCardTap(card.id)}
             style={{
               perspective: '1000px',
               cursor: card.isFlipped || card.isMatched ? 'default' : 'pointer',
+              opacity: card.isMatched && !card.justMatched ? 0.7 : 1,
+              transition: 'opacity 0.3s',
             }}
           >
             <motion.div
@@ -225,11 +268,6 @@ export function WordMatching({ words, onComplete }: WordMatchingProps) {
                 >
                   {card.content}
                 </span>
-                {card.type === 'english' && (
-                  <span style={{ fontSize: '12px', color: 'var(--color-text-light)' }}>
-                    English
-                  </span>
-                )}
               </div>
 
               {/* Back (hidden) */}
@@ -253,7 +291,8 @@ export function WordMatching({ words, onComplete }: WordMatchingProps) {
               </div>
             </motion.div>
           </motion.div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

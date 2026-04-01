@@ -23,12 +23,14 @@ export function StarRating({
           transition={{
             delay: animate ? i * 0.2 : 0,
             type: 'spring',
-            stiffness: 260,
-            damping: 20,
+            stiffness: 340,
+            damping: 18,
           }}
           style={{
             fontSize: `${size}px`,
-            filter: i < stars ? 'none' : 'grayscale(1) opacity(0.3)',
+            filter: i < stars
+              ? 'drop-shadow(0 0 6px rgba(255,215,0,0.5))'
+              : 'grayscale(1) opacity(0.3)',
             display: 'inline-block',
           }}
         >

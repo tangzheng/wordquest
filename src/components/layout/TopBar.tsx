@@ -20,12 +20,13 @@ export function TopBar({ title, showBack = true }: TopBarProps) {
         justifyContent: 'space-between',
         padding: 'var(--space-sm) var(--space-md)',
         minHeight: '56px',
+        borderBottom: '1px solid rgba(0,0,0,0.06)',
       }}
     >
       <div style={{ width: '48px' }}>
         {showBack && (
           <IconButton onClick={() => navigate(-1)} label="返回">
-            ◀
+            ←
           </IconButton>
         )}
       </div>
@@ -44,13 +45,35 @@ export function TopBar({ title, showBack = true }: TopBarProps) {
         </h2>
       )}
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-md)' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)' }}>
         {streak > 0 && (
-          <span style={{ fontSize: 'var(--font-size-md)', fontWeight: 700 }}>
+          <span
+            style={{
+              fontSize: 'var(--font-size-md)',
+              fontWeight: 700,
+              backgroundColor: 'rgba(255, 152, 56, 0.15)',
+              padding: '4px 12px',
+              borderRadius: 'var(--radius-pill)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '4px',
+            }}
+          >
             🔥 {streak}
           </span>
         )}
-        <span style={{ fontSize: 'var(--font-size-md)', fontWeight: 700 }}>
+        <span
+          style={{
+            fontSize: 'var(--font-size-md)',
+            fontWeight: 700,
+            backgroundColor: 'rgba(255, 215, 0, 0.15)',
+            padding: '4px 12px',
+            borderRadius: 'var(--radius-pill)',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '4px',
+          }}
+        >
           ⭐ {totalStars}
         </span>
       </div>

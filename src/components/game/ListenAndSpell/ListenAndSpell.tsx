@@ -1,10 +1,11 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import type { Word, AnswerResult } from '@/types';
 import { useTTS } from '@/hooks/useTTS';
 import { useSound } from '@/hooks/useSound';
 import { generateDistractorLetters } from '@/engine/distractorGenerator';
 import { shuffle } from '@/utils/shuffle';
+import { Button } from '@/components/ui/Button';
 
 interface LetterTile {
   id: string;
@@ -27,6 +28,7 @@ export function ListenAndSpell({ words, onComplete }: ListenAndSpellProps) {
   const [isRevealing, setIsRevealing] = useState(false);
   const [attempts, setAttempts] = useState(0);
   const [hintCount, setHintCount] = useState(0);
+  const [showHintIndicator, setShowHintIndicator] = useState(false);
   const startTimeRef = useRef(Date.now());
   const debounceRef = useRef(false);
   const hintTimer1 = useRef<ReturnType<typeof setTimeout>>(undefined);
@@ -68,9 +70,13 @@ export function ListenAndSpell({ words, onComplete }: ListenAndSpellProps) {
     // Hint timers
     hintTimer1.current = setTimeout(() => {
       setHintCount((c) => Math.max(c, 1));
+      setShowHintIndicator(true);
+      setTimeout(() => setShowHintIndicator(false), 1500);
     }, 10000);
     hintTimer2.current = setTimeout(() => {
       setHintCount((c) => Math.max(c, 2));
+      setShowHintIndicator(true);
+      setTimeout(() => setShowHintIndicator(false), 1500);
     }, 20000);
 
     return () => {
@@ -311,7 +317,7 @@ export function ListenAndSpell({ words, onComplete }: ListenAndSpellProps) {
           height: '100px',
           borderRadius: '50%',
           border: 'none',
-          backgroundColor: 'var(--color-secondary)',
+          background: 'linear-gradient(135deg, var(--color-secondary), var(--color-accent))',
           fontSize: '48px',
           cursor: 'pointer',
           boxShadow: 'var(--shadow-md)',
@@ -406,6 +412,28 @@ export function ListenAndSpell({ words, onComplete }: ListenAndSpellProps) {
         </motion.div>
       )}
 
+      {/* Hint indicator */}
+      <AnimatePresence>
+        {showHintIndicator && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+            style={{
+              fontSize: 'var(--font-size-lg)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 'var(--space-xs)',
+              color: 'var(--color-accent)',
+              fontFamily: 'var(--font-heading)',
+            }}
+          >
+            <span style={{ fontSize: '28px' }}>💡</span>
+            提示来啦！
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Letter tray */}
       <div
         style={{
@@ -451,27 +479,14 @@ export function ListenAndSpell({ words, onComplete }: ListenAndSpellProps) {
 
       {/* Check button */}
       {allSlotsFilled && !isChecking && !isRevealing && (
-        <motion.button
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={handleCheck}
-          style={{
-            minHeight: 'var(--touch-target)',
-            padding: '14px 40px',
-            borderRadius: 'var(--radius-md)',
-            border: 'none',
-            backgroundColor: 'var(--color-primary)',
-            color: 'white',
-            fontFamily: 'var(--font-heading)',
-            fontSize: 'var(--font-size-lg)',
-            cursor: 'pointer',
-            boxShadow: '0 4px 0 rgba(0,0,0,0.2)',
-            userSelect: 'none',
-          }}
         >
-          检查 ✓
-        </motion.button>
+          <Button onClick={handleCheck}>
+            检查 ✓
+          </Button>
+        </motion.div>
       )}
     </div>
   );

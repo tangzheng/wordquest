@@ -28,7 +28,7 @@ export function Button({
     <motion.button
       onClick={onClick}
       disabled={disabled}
-      whileTap={{ scale: 0.93, y: 2 }}
+      whileTap={{ scale: 0.93, y: 2, filter: 'brightness(0.92)', boxShadow: '0 2px 0 rgba(0,0,0,0.2)' }}
       whileHover={{ scale: 1.03 }}
       style={{
         minHeight: isLarge ? '80px' : 'var(--touch-target)',

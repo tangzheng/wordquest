@@ -41,7 +41,7 @@ export function TopicSelectScreen() {
 
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-      <TopBar title="选择主题" />
+      <TopBar title="📚 选择主题" />
 
       <div
         style={{
@@ -56,6 +56,7 @@ export function TopicSelectScreen() {
         {pageTopics.map((topic, i) => {
           const progress = getTopicProgress(topic.id);
           const wordCount = getTopicWordCount(topic.id);
+          const isCompleted = progress === 100;
 
           return (
             <motion.div
@@ -70,11 +71,50 @@ export function TopicSelectScreen() {
                   textAlign: 'center',
                   padding: 'var(--space-md)',
                   borderLeft: `4px solid ${topic.color}`,
+                  background: `linear-gradient(135deg, ${topic.color}15 0%, ${topic.color}08 100%)`,
+                  position: 'relative',
+                  overflow: 'hidden',
                 }}
               >
-                <div style={{ fontSize: '40px', marginBottom: 'var(--space-xs)' }}>
-                  {topic.icon}
+                {/* Completed badge overlay */}
+                {isCompleted && (
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '8px',
+                      right: '8px',
+                      backgroundColor: '#4CAF50',
+                      color: '#fff',
+                      fontSize: '11px',
+                      fontWeight: 700,
+                      borderRadius: '10px',
+                      padding: '2px 8px',
+                      lineHeight: '18px',
+                    }}
+                  >
+                    ✅ 完成
+                  </div>
+                )}
+
+                {/* Emoji in circular container */}
+                <div
+                  style={{
+                    width: '72px',
+                    height: '72px',
+                    borderRadius: '50%',
+                    backgroundColor: `${topic.color}18`,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto',
+                    marginBottom: 'var(--space-xs)',
+                  }}
+                >
+                  <div style={{ fontSize: '56px', lineHeight: 1 }}>
+                    {topic.icon}
+                  </div>
                 </div>
+
                 <div
                   style={{
                     fontFamily: 'var(--font-heading)',
@@ -119,7 +159,7 @@ export function TopicSelectScreen() {
             ◀
           </Button>
           <span style={{ fontSize: 'var(--font-size-md)', fontWeight: 700 }}>
-            {page + 1} / {totalPages}
+            第 {page + 1}/{totalPages} 页
           </span>
           <Button
             onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}

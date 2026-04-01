@@ -21,6 +21,8 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
   const [correctId, setCorrectId] = useState<string | null>(null);
   const [wrongIds, setWrongIds] = useState<Set<string>>(new Set());
   const [isRevealing, setIsRevealing] = useState(false);
+  const [showPlusOne, setShowPlusOne] = useState(false);
+  const [plusOneKey, setPlusOneKey] = useState(0);
   const [attempts, setAttempts] = useState(0);
   const startTimeRef = useRef(Date.now());
   const debounceRef = useRef(false);
@@ -58,6 +60,8 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
       if (isCorrect) {
         setSelectedId(option.id);
         setCorrectId(option.id);
+        setShowPlusOne(true);
+        setPlusOneKey((k) => k + 1);
         play('correct');
         speak(currentWord.english);
 
@@ -122,6 +126,7 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
         alignItems: 'center',
         gap: 'var(--space-lg)',
         padding: 'var(--space-md)',
+        position: 'relative',
       }}
     >
       {/* Progress */}
@@ -130,6 +135,7 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
           width: '100%',
           display: 'flex',
           justifyContent: 'center',
+          alignItems: 'center',
           gap: 'var(--space-sm)',
           fontSize: 'var(--font-size-md)',
           color: 'var(--color-text-light)',
@@ -154,6 +160,16 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
             }}
           />
         ))}
+        <span
+          style={{
+            marginLeft: 'var(--space-xs)',
+            fontSize: 'var(--font-size-sm)',
+            fontFamily: 'var(--font-heading)',
+            color: 'var(--color-text-light)',
+          }}
+        >
+          {currentIndex + 1} / {words.length}
+        </span>
       </div>
 
       {/* Image */}
@@ -171,7 +187,18 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
             gap: 'var(--space-sm)',
           }}
         >
-          <WordImage emoji={currentWord.emoji} word={currentWord.english} size={160} />
+          <div
+            style={{
+              backgroundColor: 'rgba(0,0,0,0.03)',
+              borderRadius: '50%',
+              padding: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <WordImage emoji={currentWord.emoji} word={currentWord.english} size={160} />
+          </div>
           {isRevealing && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -233,7 +260,7 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
                 fontSize: 'var(--font-size-option)',
                 cursor: isWrong || isRevealing ? 'default' : 'pointer',
                 opacity: isWrong ? 0.5 : 1,
-                boxShadow: 'var(--shadow-sm)',
+                boxShadow: '0 3px 0 rgba(0,0,0,0.1)',
                 userSelect: 'none',
                 WebkitTapHighlightColor: 'transparent',
                 touchAction: 'manipulation',
@@ -245,6 +272,29 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
           );
         })}
       </div>
+
+      {/* Floating +1 animation */}
+      <AnimatePresence>
+        {showPlusOne && (
+          <motion.div
+            key={plusOneKey}
+            initial={{ y: 0, opacity: 1 }}
+            animate={{ y: -40, opacity: 0 }}
+            transition={{ duration: 0.8 }}
+            onAnimationComplete={() => setShowPlusOne(false)}
+            style={{
+              position: 'absolute',
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'var(--font-size-xl)',
+              color: 'var(--color-success)',
+              fontWeight: 'bold',
+              pointerEvents: 'none',
+            }}
+          >
+            +1
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

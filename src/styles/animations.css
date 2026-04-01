@@ -88,6 +88,21 @@
   100% { transform: rotateY(90deg); }
 }
 
+/* Shimmer - gold sweep from left to right */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Rainbow glow - cycling colorful box-shadows */
+@keyframes rainbow-glow {
+  0%   { box-shadow: 0 0 12px 4px rgba(255, 107, 107, 0.5); }
+  25%  { box-shadow: 0 0 12px 4px rgba(255, 230, 109, 0.5); }
+  50%  { box-shadow: 0 0 12px 4px rgba(81, 207, 102, 0.5); }
+  75%  { box-shadow: 0 0 12px 4px rgba(78, 205, 196, 0.5); }
+  100% { box-shadow: 0 0 12px 4px rgba(167, 139, 250, 0.5); }
+}
+
 /* Utility classes */
 .animate-shake { animation: shake 0.5s ease-in-out; }
 .animate-pop { animation: pop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
@@ -101,6 +116,19 @@
 .animate-star { animation: starEarn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 .animate-float-up { animation: floatUp 1s ease-out forwards; }
 .animate-wiggle { animation: wiggle 0.5s ease-in-out; }
+.animate-shimmer {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 215, 0, 0.4) 40%,
+    rgba(255, 223, 0, 0.6) 50%,
+    rgba(255, 215, 0, 0.4) 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+.animate-glow-gold { animation: rainbow-glow 3s ease-in-out infinite; }
 
 /* Staggered animation delays */
 .delay-100 { animation-delay: 100ms; }

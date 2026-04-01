@@ -69,13 +69,58 @@ export function ComprehensiveMode({ words, onComplete }: ComprehensiveModeProps)
           justifyContent: 'center',
           gap: 'var(--space-lg)',
           padding: 'var(--space-xl)',
+          position: 'relative',
+          overflow: 'hidden',
         }}
       >
+        {/* Floating celebratory emoji */}
+        {['🎉', '🌟', '⭐', '🎉', '🌟', '⭐'].map((emoji, i) => (
+          <motion.div
+            key={i}
+            initial={{
+              opacity: 0,
+              y: 50,
+              x: (i % 2 === 0 ? -1 : 1) * (40 + i * 15),
+            }}
+            animate={{
+              opacity: [0, 1, 0],
+              y: [50, -60 - i * 20],
+              x: (i % 2 === 0 ? -1 : 1) * (40 + i * 15),
+            }}
+            transition={{
+              duration: 1.5,
+              delay: i * 0.15,
+              ease: 'easeOut',
+            }}
+            style={{
+              position: 'absolute',
+              fontSize: '28px',
+              pointerEvents: 'none',
+            }}
+          >
+            {emoji}
+          </motion.div>
+        ))}
+
+        {/* Completed phase stat */}
+        <motion.p
+          initial={{ y: -10, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.1 }}
+          style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: 'var(--font-size-md)',
+            color: 'var(--color-success)',
+          }}
+        >
+          ✅ 上一关完成！
+        </motion.p>
+
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-          style={{ fontSize: '64px' }}
+          style={{ fontSize: '80px' }}
         >
           {next?.icon}
         </motion.div>

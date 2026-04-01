@@ -24,13 +24,14 @@ export function Card({
       initial={animate ? { opacity: 0, y: 10 } : false}
       animate={{ opacity: 1, y: 0 }}
       whileTap={onClick ? { scale: 0.97 } : undefined}
-      whileHover={onClick ? { scale: 1.02 } : undefined}
+      whileHover={onClick ? { y: -2, boxShadow: '0 6px 20px rgba(0,0,0,0.12)' } : undefined}
       transition={{ duration: 0.3 }}
       style={{
         backgroundColor: color,
         borderRadius: 'var(--radius-lg)',
         padding,
         boxShadow: 'var(--shadow-md)',
+        border: '1px solid rgba(0,0,0,0.06)',
         cursor: onClick ? 'pointer' : 'default',
         userSelect: 'none',
         ...style,
