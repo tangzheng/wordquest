@@ -1,0 +1,110 @@
+/* WordQuest Animations */
+
+/* Shake - wrong answer */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-6px); }
+  20%, 40%, 60%, 80% { transform: translateX(6px); }
+}
+
+/* Pop - appear with spring */
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Bounce - subtle bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Glow - correct answer */
+@keyframes glow {
+  0% { box-shadow: 0 0 0 0 rgba(81, 207, 102, 0.6); }
+  50% { box-shadow: 0 0 20px 10px rgba(81, 207, 102, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(81, 207, 102, 0); }
+}
+
+/* Pulse - attention drawing */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Fade in up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Star spin and scale - earning a star */
+@keyframes starEarn {
+  0% { transform: scale(0) rotate(-180deg); opacity: 0; }
+  60% { transform: scale(1.3) rotate(20deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* Float up and fade - for floating +1 indicators */
+@keyframes floatUp {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-60px) scale(0.8); }
+}
+
+/* Wiggle - playful attention */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+/* Card flip for matching game */
+@keyframes flipIn {
+  0% { transform: rotateY(90deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+@keyframes flipOut {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(90deg); }
+}
+
+/* Utility classes */
+.animate-shake { animation: shake 0.5s ease-in-out; }
+.animate-pop { animation: pop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.animate-bounce { animation: bounce 1s ease-in-out infinite; }
+.animate-glow { animation: glow 1s ease-in-out; }
+.animate-pulse { animation: pulse 2s ease-in-out infinite; }
+.animate-fade-in { animation: fadeIn 0.3s ease; }
+.animate-fade-in-up { animation: fadeInUp 0.4s ease; }
+.animate-slide-right { animation: slideInRight 0.3s ease; }
+.animate-slide-left { animation: slideInLeft 0.3s ease; }
+.animate-star { animation: starEarn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.animate-float-up { animation: floatUp 1s ease-out forwards; }
+.animate-wiggle { animation: wiggle 0.5s ease-in-out; }
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
