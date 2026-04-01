@@ -17,7 +17,7 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<AnswerResult[]>([]);
   const [options, setOptions] = useState<Word[]>([]);
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [_selectedId, setSelectedId] = useState<string | null>(null);
   const [correctId, setCorrectId] = useState<string | null>(null);
   const [wrongIds, setWrongIds] = useState<Set<string>>(new Set());
   const [isRevealing, setIsRevealing] = useState(false);
@@ -44,14 +44,6 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
     startTimeRef.current = Date.now();
     debounceRef.current = false;
   }, [currentIndex, currentWord]);
-
-  const goToNext = useCallback(() => {
-    if (isLastWord) {
-      onComplete(answers);
-    } else {
-      setCurrentIndex((i) => i + 1);
-    }
-  }, [isLastWord, answers, onComplete]);
 
   const handleSelect = useCallback(
     (option: Word) => {

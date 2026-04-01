@@ -5,7 +5,6 @@ import { ALL_BADGES } from '@/engine/badges';
 import { TopBar } from '@/components/layout/TopBar';
 import { Card } from '@/components/ui/Card';
 import { ProgressBar } from '@/components/ui/ProgressBar';
-import { StarRating } from '@/components/ui/StarRating';
 
 export function ProgressScreen() {
   const wordMastery = useGameStore((s) => s.wordMastery);

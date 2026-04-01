@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import type { Word, AnswerResult } from '@/types';
 import { useTTS } from '@/hooks/useTTS';
 import { useSound } from '@/hooks/useSound';
@@ -29,8 +29,8 @@ export function ListenAndSpell({ words, onComplete }: ListenAndSpellProps) {
   const [hintCount, setHintCount] = useState(0);
   const startTimeRef = useRef(Date.now());
   const debounceRef = useRef(false);
-  const hintTimer1 = useRef<ReturnType<typeof setTimeout>>();
-  const hintTimer2 = useRef<ReturnType<typeof setTimeout>>();
+  const hintTimer1 = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const hintTimer2 = useRef<ReturnType<typeof setTimeout>>(undefined);
   const { speak, speakTwice } = useTTS();
   const { play } = useSound();
 
@@ -232,7 +232,7 @@ export function ListenAndSpell({ words, onComplete }: ListenAndSpellProps) {
           // Reset slots (keep hints)
           const wordLetters = currentWord.english.toLowerCase().split('');
           setSlots((prev) =>
-            prev.map((s, i) => (i < hintCount ? wordLetters[i] : null))
+            prev.map((_s, i) => (i < hintCount ? wordLetters[i] : null))
           );
           setTray((prev) =>
             prev.map((t) => {

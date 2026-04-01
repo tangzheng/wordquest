@@ -12,7 +12,6 @@ export function AppShell({ title, showBack }: AppShellProps) {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh',
         minHeight: '100dvh',
         maxWidth: '600px',
         margin: '0 auto',

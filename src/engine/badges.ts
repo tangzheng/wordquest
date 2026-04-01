@@ -1,4 +1,3 @@
-import type { TopicMeta } from '@/types';
 import { TOPICS } from '@/data/topics';
 import { getWordsByTopic } from '@/data/words';
 import { isMastered } from './spacedRepetition';

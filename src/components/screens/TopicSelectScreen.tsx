@@ -14,7 +14,6 @@ const TOPICS_PER_PAGE = 6;
 export function TopicSelectScreen() {
   const navigate = useNavigate();
   const [page, setPage] = useState(0);
-  const currentLevel = useGameStore((s) => s.currentLevel);
   const wordMastery = useGameStore((s) => s.wordMastery);
 
   // Filter topics that have words for current level

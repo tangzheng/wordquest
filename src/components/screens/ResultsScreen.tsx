@@ -3,7 +3,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import type { AnswerResult, Word, GameMode } from '@/types';
-import { getTopicById } from '@/data/topics';
 import { getWordById } from '@/data/words';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
@@ -72,7 +71,6 @@ export function ResultsScreen() {
   }
 
   const { answers, stars, accuracy, topic, mode } = state;
-  const topicMeta = getTopicById(topic);
   const correctCount = answers.filter((a) => a.correct).length;
 
   const messages = [
