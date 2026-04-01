@@ -9,7 +9,7 @@ import { SettingsScreen } from '@/components/screens/SettingsScreen';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/wordquest">
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/topics" element={<TopicSelectScreen />} />
