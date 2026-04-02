@@ -2,9 +2,11 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { IconButton } from '@/components/ui/IconButton';
 import { ALPHABET_DATA } from '@/data/alphabet';
+import { useTTS } from '@/hooks/useTTS';
 
 export function AlphabetHomeScreen() {
   const navigate = useNavigate();
+  const { speak } = useTTS();
 
   return (
     <div
@@ -184,12 +186,7 @@ export function AlphabetHomeScreen() {
               transition={{ delay: i * 0.02 }}
             >
               <div
-                onClick={() => {
-                  // Speak the letter using Web Speech API
-                  const utterance = new SpeechSynthesisUtterance(letter.letter);
-                  utterance.lang = 'en-US';
-                  speechSynthesis.speak(utterance);
-                }}
+                onClick={() => speak(letter.letter)}
                 style={{
                   width: '56px',
                   height: '56px',

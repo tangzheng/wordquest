@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { IconButton } from '@/components/ui/IconButton';
 import { ALPHABET_DATA, getRandomLetters, type AlphabetLetter } from '@/data/alphabet';
+import { useTTS } from '@/hooks/useTTS';
 
 interface AnswerResult {
   letterId: string;
@@ -15,6 +16,7 @@ const TOTAL_ROUNDS = 10;
 export function AlphabetPlayScreen() {
   const { mode } = useParams<{ mode: string }>();
   const navigate = useNavigate();
+  const { speak } = useTTS();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [letters, setLetters] = useState<AlphabetLetter[]>([]);
   const [options, setOptions] = useState<AlphabetLetter[]>([]);
@@ -58,17 +60,13 @@ export function AlphabetPlayScreen() {
   // Auto-play sound in sound mode
   useEffect(() => {
     if (isSoundMode && currentLetter && !isRevealing) {
-      const utterance = new SpeechSynthesisUtterance(currentLetter.letter);
-      utterance.lang = 'en-US';
-      speechSynthesis.speak(utterance);
+      speak(currentLetter.letter);
     }
-  }, [currentLetter, isSoundMode, isRevealing]);
+  }, [currentLetter, isSoundMode, isRevealing, speak]);
 
   const speakLetter = useCallback((letter: AlphabetLetter) => {
-    const utterance = new SpeechSynthesisUtterance(letter.letter);
-    utterance.lang = 'en-US';
-    speechSynthesis.speak(utterance);
-  }, []);
+    speak(letter.letter);
+  }, [speak]);
 
   const handleSelect = useCallback(
     (option: AlphabetLetter) => {
