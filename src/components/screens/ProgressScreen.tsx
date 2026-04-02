@@ -100,87 +100,138 @@ export function ProgressScreen() {
         </motion.div>
         {(['topic', 'streak', 'milestone'] as const).map((category, catIdx) => {
           const categoryNames = { topic: '主题徽章', streak: '连续学习', milestone: '里程碑' };
+          const categoryColors = { topic: { primary: '#FF6B6B', secondary: '#FF8E53' }, streak: { primary: '#FF9500', secondary: '#FF5E3A' }, milestone: { primary: '#A78BFA', secondary: '#7C3AED' } };
           const categoryBadges = ALL_BADGES.filter((b) => b.category === category);
           if (categoryBadges.length === 0) return null;
           return (
             <motion.div key={category} {...staggerItem} transition={{ delay: 0.25 + catIdx * 0.08 }}>
               <Card padding="var(--space-md)">
-                <h4
-                  style={{
-                    fontSize: 'var(--font-size-sm)',
-                    color: 'var(--color-text-light)',
-                    marginBottom: 'var(--space-sm)',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.5px',
-                  }}
-                >
-                  {categoryNames[category]}
-                </h4>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-sm)', marginBottom: 'var(--space-md)' }}>
+                  <div style={{
+                    width: '4px',
+                    height: '20px',
+                    borderRadius: '2px',
+                    background: `linear-gradient(180deg, ${categoryColors[category].primary}, ${categoryColors[category].secondary})`,
+                  }} />
+                  <h4
+                    style={{
+                      fontSize: 'var(--font-size-sm)',
+                      color: 'var(--color-text-light)',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px',
+                      margin: 0,
+                    }}
+                  >
+                    {categoryNames[category]}
+                  </h4>
+                </div>
                 <div
                   style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(80px, 1fr))',
                     gap: 'var(--space-sm)',
                   }}
                 >
                   {categoryBadges.map((badge) => {
                     const isEarned = badges.includes(badge.id);
+                    const colors = categoryColors[category];
                     return (
-                      <div
+                      <motion.div
                         key={badge.id}
                         title={isEarned ? badge.nameCn : badge.descriptionCn}
+                        whileHover={{ scale: isEarned ? 1.05 : 1 }}
+                        whileTap={{ scale: 0.95 }}
                         style={{
                           display: 'flex',
                           flexDirection: 'column',
                           alignItems: 'center',
-                          gap: '4px',
-                          width: '72px',
-                          padding: 'var(--space-xs)',
-                          borderRadius: 'var(--radius-md)',
-                          backgroundColor: isEarned ? 'rgba(255, 215, 0, 0.1)' : 'rgba(0, 0, 0, 0.03)',
-                          opacity: isEarned ? 1 : 0.5,
+                          gap: '6px',
+                          padding: 'var(--space-sm)',
+                          borderRadius: '16px',
+                          background: isEarned
+                            ? `linear-gradient(145deg, ${colors.primary}15 0%, ${colors.secondary}10 100%)`
+                            : 'rgba(0, 0, 0, 0.03)',
+                          border: isEarned
+                            ? `1px solid ${colors.primary}30`
+                            : '1px solid rgba(0,0,0,0.06)',
+                          boxShadow: isEarned
+                            ? `0 4px 16px ${colors.primary}15`
+                            : 'none',
+                          transition: 'all 0.3s ease',
                         }}
                       >
-                        <span
+                        {/* Badge icon */}
+                        <div
                           style={{
-                            fontSize: '28px',
-                            filter: isEarned ? 'none' : 'grayscale(100%)',
-                            position: 'relative',
-                            display: 'inline-flex',
+                            width: '52px',
+                            height: '52px',
+                            borderRadius: '50%',
+                            background: isEarned
+                              ? `linear-gradient(135deg, ${colors.primary} 0%, ${colors.secondary} 100%)`
+                              : 'linear-gradient(135deg, #666 0%, #444 100%)',
+                            display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
+                            boxShadow: isEarned
+                              ? `0 4px 16px ${colors.primary}40`
+                              : '0 2px 8px rgba(0,0,0,0.2)',
+                            position: 'relative',
                           }}
                         >
-                          {badge.icon}
+                          <span
+                            style={{
+                              fontSize: '26px',
+                              filter: isEarned ? 'none' : 'grayscale(100%)',
+                              opacity: isEarned ? 1 : 0.4,
+                            }}
+                          >
+                            {badge.icon}
+                          </span>
                           {!isEarned && (
-                            <span
+                            <div
                               style={{
                                 position: 'absolute',
                                 inset: 0,
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
-                                backgroundColor: 'rgba(0,0,0,0.35)',
+                                backgroundColor: 'rgba(0,0,0,0.4)',
                                 borderRadius: '50%',
-                                fontSize: '14px',
+                                fontSize: '16px',
                               }}
                             >
                               🔒
-                            </span>
+                            </div>
                           )}
-                        </span>
+                          {/* Shine effect for earned badges */}
+                          {isEarned && (
+                            <div
+                              style={{
+                                position: 'absolute',
+                                top: '2px',
+                                left: '8px',
+                                width: '12px',
+                                height: '6px',
+                                background: 'rgba(255,255,255,0.4)',
+                                borderRadius: '3px',
+                                transform: 'rotate(-30deg)',
+                              }}
+                            />
+                          )}
+                        </div>
                         <span
                           style={{
                             fontSize: '11px',
                             textAlign: 'center',
-                            lineHeight: 1.2,
+                            lineHeight: 1.3,
                             color: isEarned ? 'var(--color-text)' : 'var(--color-text-light)',
                             fontFamily: 'var(--font-heading)',
+                            fontWeight: isEarned ? 600 : 400,
                           }}
                         >
                           {badge.nameCn}
                         </span>
-                      </div>
+                      </motion.div>
                     );
                   })}
                 </div>

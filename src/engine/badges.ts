@@ -29,7 +29,7 @@ const streakBadges: BadgeDefinition[] = [
   {
     id: 'streak-3',
     name: 'Hot Starter',
-    nameCn: '三天小火苗',
+    nameCn: '小小火苗',
     icon: '🔥',
     description: 'Maintain a 3-day streak',
     descriptionCn: '连续学习3天',
@@ -47,7 +47,7 @@ const streakBadges: BadgeDefinition[] = [
   {
     id: 'streak-30',
     name: 'Monthly Master',
-    nameCn: '月度冠军',
+    nameCn: '月度学霸',
     icon: '👑',
     description: 'Maintain a 30-day streak',
     descriptionCn: '连续学习30天',
@@ -60,8 +60,8 @@ const milestoneBadges: BadgeDefinition[] = [
   {
     id: 'first-game',
     name: 'First Step',
-    nameCn: '第一步',
-    icon: '👣',
+    nameCn: '初次冒险',
+    icon: '🚀',
     description: 'Complete your first game',
     descriptionCn: '完成第一次游戏',
     category: 'milestone',
@@ -69,26 +69,35 @@ const milestoneBadges: BadgeDefinition[] = [
   {
     id: 'first-perfect',
     name: 'Perfect Round',
-    nameCn: '满分时刻',
-    icon: '💯',
+    nameCn: '完美一击',
+    icon: '💫',
     description: 'Get 3 stars in a round',
     descriptionCn: '在一轮游戏中获得3颗星',
     category: 'milestone',
   },
   {
-    id: 'words-50',
+    id: 'words-10',
     name: 'Word Explorer',
-    nameCn: '单词探索者',
+    nameCn: '单词探险家',
     icon: '🗺️',
+    description: 'Learn 10 words',
+    descriptionCn: '学习10个单词',
+    category: 'milestone',
+  },
+  {
+    id: 'words-50',
+    name: 'Word Collector',
+    nameCn: '单词收藏家',
+    icon: '📚',
     description: 'Learn 50 words',
     descriptionCn: '学习50个单词',
     category: 'milestone',
   },
   {
     id: 'words-100',
-    name: 'Word Collector',
-    nameCn: '单词收藏家',
-    icon: '📚',
+    name: 'Word Master',
+    nameCn: '单词大师',
+    icon: '🏅',
     description: 'Learn 100 words',
     descriptionCn: '学习100个单词',
     category: 'milestone',
@@ -103,21 +112,48 @@ const milestoneBadges: BadgeDefinition[] = [
     category: 'milestone',
   },
   {
+    id: 'words-500',
+    name: 'Word Legend',
+    nameCn: '单词传奇',
+    icon: '💎',
+    description: 'Learn 500 words',
+    descriptionCn: '学习500个单词',
+    category: 'milestone',
+  },
+  {
     id: 'stars-10',
-    name: 'Star Collector',
-    nameCn: '星星收集者',
-    icon: '🌟',
+    name: 'Star Finder',
+    nameCn: '星星发现者',
+    icon: '⭐',
     description: 'Earn 10 stars',
     descriptionCn: '获得10颗星星',
     category: 'milestone',
   },
   {
     id: 'stars-50',
+    name: 'Star Collector',
+    nameCn: '星星收藏家',
+    icon: '🌟',
+    description: 'Earn 50 stars',
+    descriptionCn: '获得50颗星星',
+    category: 'milestone',
+  },
+  {
+    id: 'stars-100',
     name: 'Star Master',
     nameCn: '星星大师',
     icon: '✨',
-    description: 'Earn 50 stars',
-    descriptionCn: '获得50颗星星',
+    description: 'Earn 100 stars',
+    descriptionCn: '获得100颗星星',
+    category: 'milestone',
+  },
+  {
+    id: 'all-topics',
+    name: 'Explorer',
+    nameCn: '全能探索者',
+    icon: '🌈',
+    description: 'Complete all topics',
+    descriptionCn: '完成所有主题',
     category: 'milestone',
   },
 ];
@@ -173,11 +209,14 @@ export function checkNewBadges(
     // Milestone badges
     if (badge.id === 'first-game') earned = totalLearned > 0;
     if (badge.id === 'first-perfect') earned = latestStars === 3;
+    if (badge.id === 'words-10') earned = totalLearned >= 10;
     if (badge.id === 'words-50') earned = totalLearned >= 50;
     if (badge.id === 'words-100') earned = totalLearned >= 100;
     if (badge.id === 'words-200') earned = totalLearned >= 200;
+    if (badge.id === 'words-500') earned = totalLearned >= 500;
     if (badge.id === 'stars-10') earned = totalStars >= 10;
     if (badge.id === 'stars-50') earned = totalStars >= 50;
+    if (badge.id === 'stars-100') earned = totalStars >= 100;
 
     if (earned) {
       newBadges.push(badge.id);
