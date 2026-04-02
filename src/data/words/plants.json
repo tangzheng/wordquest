@@ -1,0 +1,65 @@
+{
+  "topic": "plants",
+  "words": [
+    {
+      "id": "plants_flower",
+      "english": "flower",
+      "chinese": "花",
+      "emoji": "🌸",
+      "emojiAlt": ["🌼", "🌺"],
+      "level": "starters",
+      "phonetic": "/ˈflaʊə(r)/",
+      "tags": ["basic", "nature"],
+      "letterCount": 6,
+      "frequency": 1
+    },
+    {
+      "id": "plants_tree",
+      "english": "tree",
+      "chinese": "树",
+      "emoji": "🌳",
+      "emojiAlt": ["🌲"],
+      "level": "starters",
+      "phonetic": "/triː/",
+      "tags": ["basic", "nature"],
+      "letterCount": 4,
+      "frequency": 1
+    },
+    {
+      "id": "plants_grass",
+      "english": "grass",
+      "chinese": "草",
+      "emoji": "🌱",
+      "emojiAlt": ["🌿"],
+      "level": "movers",
+      "phonetic": "/ɡrɑːs/",
+      "tags": ["basic", "nature"],
+      "letterCount": 5,
+      "frequency": 1
+    },
+    {
+      "id": "plants_leaf",
+      "english": "leaf",
+      "chinese": "树叶",
+      "emoji": "🍃",
+      "emojiAlt": ["🍂"],
+      "level": "movers",
+      "phonetic": "/liːf/",
+      "tags": ["basic", "nature"],
+      "letterCount": 4,
+      "frequency": 1
+    },
+    {
+      "id": "plants_leaves",
+      "english": "leaves",
+      "chinese": "树叶（复数）",
+      "emoji": "🍂",
+      "emojiAlt": ["🍃"],
+      "level": "movers",
+      "phonetic": "/liːvz/",
+      "tags": ["basic", "nature"],
+      "letterCount": 6,
+      "frequency": 1
+    }
+  ]
+}

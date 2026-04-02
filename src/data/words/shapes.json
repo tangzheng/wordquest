@@ -1,0 +1,15 @@
+{
+  "topic": "shapes",
+  "words": [
+    {"id": "shapes_circle", "english": "circle", "chinese": "圆形", "emoji": "⭕", "emojiAlt": [], "level": "starters", "phonetic": "/ˈsɜːkəl/", "tags": ["basic"], "letterCount": 6, "frequency": 1},
+    {"id": "shapes_square", "english": "square", "chinese": "正方形", "emoji": "⬜", "emojiAlt": [], "level": "starters", "phonetic": "/skweə/", "tags": ["basic"], "letterCount": 6, "frequency": 1},
+    {"id": "shapes_triangle", "english": "triangle", "chinese": "三角形", "emoji": "🔺", "emojiAlt": [], "level": "movers", "phonetic": "/ˈtraɪæŋɡəl/", "tags": ["basic"], "letterCount": 8, "frequency": 1},
+    {"id": "shapes_rectangle", "english": "rectangle", "chinese": "长方形", "emoji": "▬", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈrektæŋɡəl/", "tags": ["basic"], "letterCount": 9, "frequency": 1},
+    {"id": "shapes_star", "english": "star", "chinese": "星形", "emoji": "⭐", "emojiAlt": [], "level": "starters", "phonetic": "/stɑː/", "tags": ["basic"], "letterCount": 4, "frequency": 1},
+    {"id": "shapes_heart", "english": "heart", "chinese": "心形", "emoji": "❤️", "emojiAlt": [], "level": "starters", "phonetic": "/hɑːt/", "tags": ["basic"], "letterCount": 5, "frequency": 1},
+    {"id": "shapes_diamond", "english": "diamond", "chinese": "钻石形", "emoji": "💎", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈdaɪmənd/", "tags": ["basic"], "letterCount": 7, "frequency": 1},
+    {"id": "shapes_oval", "english": "oval", "chinese": "椭圆形", "emoji": "🥚", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈəʊvəl/", "tags": ["basic"], "letterCount": 4, "frequency": 1},
+    {"id": "shapes_line", "english": "line", "chinese": "线条", "emoji": "➖", "emojiAlt": [], "level": "starters", "phonetic": "/laɪn/", "tags": ["basic"], "letterCount": 4, "frequency": 1},
+    {"id": "shapes_curve", "english": "curve", "chinese": "曲线", "emoji": "〰️", "emojiAlt": [], "level": "flyers", "phonetic": "/kɜːv/", "tags": ["basic"], "letterCount": 5, "frequency": 1}
+  ]
+}

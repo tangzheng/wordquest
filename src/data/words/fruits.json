@@ -1,0 +1,24 @@
+{
+  "topic": "fruits",
+  "words": [
+    {"id": "fruits_apple", "english": "apple", "chinese": "苹果", "emoji": "🍎", "emojiAlt": [], "level": "starters", "phonetic": "/ˈæpəl/", "tags": ["food"], "letterCount": 5, "frequency": 1},
+    {"id": "fruits_banana", "english": "banana", "chinese": "香蕉", "emoji": "🍌", "emojiAlt": [], "level": "starters", "phonetic": "/bəˈnɑːnə/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "fruits_orange", "english": "orange", "chinese": "橙子", "emoji": "🍊", "emojiAlt": [], "level": "starters", "phonetic": "/ˈɒrɪndʒ/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "fruits_pear", "english": "pear", "chinese": "梨", "emoji": "🍐", "emojiAlt": [], "level": "starters", "phonetic": "/peə/", "tags": ["food"], "letterCount": 4, "frequency": 1},
+    {"id": "fruits_grape", "english": "grape", "chinese": "葡萄", "emoji": "🍇", "emojiAlt": [], "level": "starters", "phonetic": "/ɡreɪp/", "tags": ["food"], "letterCount": 5, "frequency": 1},
+    {"id": "fruits_watermelon", "english": "watermelon", "chinese": "西瓜", "emoji": "🍉", "emojiAlt": [], "level": "starters", "phonetic": "/ˈwɔːtəmelən/", "tags": ["food"], "letterCount": 10, "frequency": 1},
+    {"id": "fruits_strawberry", "english": "strawberry", "chinese": "草莓", "emoji": "🍓", "emojiAlt": [], "level": "movers", "phonetic": "/ˈstrɔːbəri/", "tags": ["food"], "letterCount": 10, "frequency": 1},
+    {"id": "fruits_peach", "english": "peach", "chinese": "桃子", "emoji": "🍑", "emojiAlt": [], "level": "movers", "phonetic": "/piːtʃ/", "tags": ["food"], "letterCount": 5, "frequency": 1},
+    {"id": "fruits_pineapple", "english": "pineapple", "chinese": "菠萝", "emoji": "🍍", "emojiAlt": [], "level": "movers", "phonetic": "/ˈpaɪnæpəl/", "tags": ["food"], "letterCount": 9, "frequency": 1},
+    {"id": "fruits_mango", "english": "mango", "chinese": "芒果", "emoji": "🥭", "emojiAlt": [], "level": "movers", "phonetic": "/ˈmæŋɡəʊ/", "tags": ["food"], "letterCount": 5, "frequency": 1},
+    {"id": "fruits_cherry", "english": "cherry", "chinese": "樱桃", "emoji": "🍒", "emojiAlt": [], "level": "movers", "phonetic": "/ˈtʃeri/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "fruits_lemon", "english": "lemon", "chinese": "柠檬", "emoji": "🍋", "emojiAlt": [], "level": "movers", "phonetic": "/ˈlemən/", "tags": ["food"], "letterCount": 5, "frequency": 1},
+    {"id": "fruits_coconut", "english": "coconut", "chinese": "椰子", "emoji": "🥥", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈkəʊkənʌt/", "tags": ["food"], "letterCount": 7, "frequency": 1},
+    {"id": "fruits_papaya", "english": "papaya", "chinese": "木瓜", "emoji": "🫐", "emojiAlt": [], "level": "flyers", "phonetic": "/pəˈpaɪə/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "fruits_passionfruit", "english": "passion fruit", "chinese": "百香果", "emoji": "🫐", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈpæʃən frʌt/", "tags": ["food"], "letterCount": 12, "frequency": 1},
+    {"id": "fruits_litchi", "english": "lychee", "chinese": "荔枝", "emoji": "🥝", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈlaɪtʃiː/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "fruits_durian", "english": "durian", "chinese": "榴莲", "emoji": "🥭", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈdʊəriən/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "fruits_kiwi", "english": "kiwi", "chinese": "猕猴桃", "emoji": "🥝", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈkiːwiː/", "tags": ["food"], "letterCount": 4, "frequency": 1},
+    {"id": "fruits_watermelon", "english": "watermelon", "chinese": "西瓜", "emoji": "🍉", "emojiAlt": [], "level": "starters", "phonetic": "/ˈwɔːtəmelən/", "tags": ["food"], "letterCount": 10, "frequency": 1}
+  ]
+}

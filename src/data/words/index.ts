@@ -14,6 +14,16 @@ import sportsAndLeisureData from './sports-and-leisure.json';
 import timeData from './time.json';
 import placesData from './places.json';
 import workData from './work.json';
+import plantsData from './plants.json';
+import verbsData from './verbs.json';
+import adjectivesData from './adjectives.json';
+import fruitsData from './fruits.json';
+import vegetablesData from './vegetables.json';
+import natureData from './nature.json';
+import feelingsData from './feelings.json';
+import shapesData from './shapes.json';
+import spaceData from './space.json';
+import schoolsuppliesData from './schoolsupplies.json';
 import type { Word } from '@/types';
 
 interface WordDataFile {
@@ -42,6 +52,16 @@ export const allWords: Word[] = [
   ...loadTopic(timeData as WordDataFile),
   ...loadTopic(placesData as WordDataFile),
   ...loadTopic(workData as WordDataFile),
+  ...loadTopic(plantsData as WordDataFile),
+  ...loadTopic(verbsData as WordDataFile),
+  ...loadTopic(adjectivesData as WordDataFile),
+  ...loadTopic(fruitsData as WordDataFile),
+  ...loadTopic(vegetablesData as WordDataFile),
+  ...loadTopic(natureData as WordDataFile),
+  ...loadTopic(feelingsData as WordDataFile),
+  ...loadTopic(shapesData as WordDataFile),
+  ...loadTopic(spaceData as WordDataFile),
+  ...loadTopic(schoolsuppliesData as WordDataFile),
 ];
 
 export function getWordsByTopic(topicId: string): Word[] {

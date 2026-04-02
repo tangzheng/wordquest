@@ -1,0 +1,19 @@
+{
+  "topic": "space",
+  "words": [
+    {"id": "space_sun", "english": "sun", "chinese": "太阳", "emoji": "☀️", "emojiAlt": [], "level": "starters", "phonetic": "/sʌn/", "tags": ["space"], "letterCount": 3, "frequency": 1},
+    {"id": "space_moon", "english": "moon", "chinese": "月亮", "emoji": "🌙", "emojiAlt": [], "level": "starters", "phonetic": "/muːn/", "tags": ["space"], "letterCount": 4, "frequency": 1},
+    {"id": "space_star", "english": "star", "chinese": "星星", "emoji": "⭐", "emojiAlt": [], "level": "starters", "phonetic": "/stɑː/", "tags": ["space"], "letterCount": 4, "frequency": 1},
+    {"id": "space_earth", "english": "earth", "chinese": "地球", "emoji": "🌍", "emojiAlt": [], "level": "movers", "phonetic": "/ɜːθ/", "tags": ["space"], "letterCount": 5, "frequency": 1},
+    {"id": "space_planet", "english": "planet", "chinese": "行星", "emoji": "🪐", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈplænɪt/", "tags": ["space"], "letterCount": 6, "frequency": 1},
+    {"id": "space_rocket", "english": "rocket", "chinese": "火箭", "emoji": "🚀", "emojiAlt": [], "level": "movers", "phonetic": "/ˈrɒkɪt/", "tags": ["space", "transport"], "letterCount": 6, "frequency": 1},
+    {"id": "space_astronaut", "english": "astronaut", "chinese": "宇航员", "emoji": "👨‍🚀", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈæstrənɔːt/", "tags": ["job", "space"], "letterCount": 9, "frequency": 1},
+    {"id": "space_alien", "english": "alien", "chinese": "外星人", "emoji": "👽", "emojiAlt": [], "level": "movers", "phonetic": "/ˈeɪliən/", "tags": ["space"], "letterCount": 5, "frequency": 1},
+    {"id": "space_ufo", "english": "UFO", "chinese": "不明飞行物", "emoji": "🛸", "emojiAlt": [], "level": "flyers", "phonetic": "/ˌjuː ef ˈəʊ/", "tags": ["space"], "letterCount": 3, "frequency": 1},
+    {"id": "space_spaceship", "english": "spaceship", "chinese": "宇宙飞船", "emoji": "🛸", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈspeɪsʃɪp/", "tags": ["space", "transport"], "letterCount": 9, "frequency": 1},
+    {"id": "space_galaxy", "english": "galaxy", "chinese": "星系", "emoji": "🌌", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈɡæləksi/", "tags": ["space"], "letterCount": 6, "frequency": 1},
+    {"id": "space_meteor", "english": "meteor", "chinese": "流星", "emoji": "☄️", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈmiːtiə/", "tags": ["space"], "letterCount": 6, "frequency": 1},
+    {"id": "space_satellite", "english": "satellite", "chinese": "卫星", "emoji": "🛰️", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈsætəlaɪt/", "tags": ["space"], "letterCount": 9, "frequency": 1},
+    {"id": "space_solar", "english": "solar", "chinese": "太阳的", "emoji": "☀️", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈsəʊlə/", "tags": ["space"], "letterCount": 5, "frequency": 1}
+  ]
+}

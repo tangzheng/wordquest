@@ -1,0 +1,25 @@
+{
+  "topic": "schoolsupplies",
+  "words": [
+    {"id": "schoolsupplies_bag", "english": "bag", "chinese": "书包", "emoji": "🎒", "emojiAlt": [], "level": "starters", "phonetic": "/bæɡ/", "tags": ["school"], "letterCount": 3, "frequency": 1},
+    {"id": "schoolsupplies_pencil", "english": "pencil", "chinese": "铅笔", "emoji": "✏️", "emojiAlt": [], "level": "starters", "phonetic": "/ˈpensəl/", "tags": ["school"], "letterCount": 6, "frequency": 1},
+    {"id": "schoolsupplies_pen", "english": "pen", "chinese": "钢笔", "emoji": "🖊️", "emojiAlt": [], "level": "starters", "phonetic": "/pen/", "tags": ["school"], "letterCount": 3, "frequency": 1},
+    {"id": "schoolsupplies_ruler", "english": "ruler", "chinese": "尺子", "emoji": "📏", "emojiAlt": [], "level": "starters", "phonetic": "/ˈruːlə/", "tags": ["school"], "letterCount": 5, "frequency": 1},
+    {"id": "schoolsupplies_eraser", "english": "eraser", "chinese": "橡皮擦", "emoji": "🧽", "emojiAlt": [], "level": "starters", "phonetic": "/ɪˈreɪzə/", "tags": ["school"], "letterCount": 6, "frequency": 1},
+    {"id": "schoolsupplies_book", "english": "book", "chinese": "书", "emoji": "📚", "emojiAlt": [], "level": "starters", "phonetic": "/bʊk/", "tags": ["school"], "letterCount": 4, "frequency": 1},
+    {"id": "schoolsupplies_notebook", "english": "notebook", "chinese": "笔记本", "emoji": "📓", "emojiAlt": [], "level": "starters", "phonetic": "/ˈnəʊtbʊk/", "tags": ["school"], "letterCount": 8, "frequency": 1},
+    {"id": "schoolsupplies_paper", "english": "paper", "chinese": "纸", "emoji": "📄", "emojiAlt": [], "level": "starters", "phonetic": "/ˈpeɪpə/", "tags": ["school"], "letterCount": 5, "frequency": 1},
+    {"id": "schoolsupplies_scissors", "english": "scissors", "chinese": "剪刀", "emoji": "✂️", "emojiAlt": [], "level": "movers", "phonetic": "/ˈsɪzəz/", "tags": ["school"], "letterCount": 8, "frequency": 1},
+    {"id": "schoolsupplies_glue", "english": "glue", "chinese": "胶水", "emoji": "🧴", "emojiAlt": [], "level": "movers", "phonetic": "/ɡluː/", "tags": ["school"], "letterCount": 4, "frequency": 1},
+    {"id": "schoolsupplies_crayon", "english": "crayon", "chinese": "蜡笔", "emoji": "🖍️", "emojiAlt": [], "level": "movers", "phonetic": "/ˈkreɪən/", "tags": ["school"], "letterCount": 6, "frequency": 1},
+    {"id": "schoolsupplies_marker", "english": "marker", "chinese": "马克笔", "emoji": "🖌️", "emojiAlt": [], "level": "movers", "phonetic": "/ˈmɑːkə/", "tags": ["school"], "letterCount": 6, "frequency": 1},
+    {"id": "schoolsupplies_chalk", "english": "chalk", "chinese": "粉笔", "emoji": "📝", "emojiAlt": [], "level": "movers", "phonetic": "/tʃɔːk/", "tags": ["school"], "letterCount": 5, "frequency": 1},
+    {"id": "schoolsupplies_compass", "english": "compass", "chinese": "圆规", "emoji": "📐", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈkʌmpəs/", "tags": ["school"], "letterCount": 7, "frequency": 1},
+    {"id": "schoolsupplies_dictionary", "english": "dictionary", "chinese": "字典", "emoji": "📖", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈdɪkʃəneri/", "tags": ["school"], "letterCount": 10, "frequency": 1},
+    {"id": "schoolsupplies_backpack", "english": "backpack", "chinese": "背包", "emoji": "🎒", "emojiAlt": [], "level": "movers", "phonetic": "/ˈbækpæk/", "tags": ["school"], "letterCount": 8, "frequency": 1},
+    {"id": "schoolsupplies_stapler", "english": "stapler", "chinese": "订书机", "emoji": "📎", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈsteɪplə/", "tags": ["school"], "letterCount": 7, "frequency": 1},
+    {"id": "schoolsupplies_tape", "english": "tape", "chinese": "胶带", "emoji": "📎", "emojiAlt": [], "level": "flyers", "phonetic": "/teɪp/", "tags": ["school"], "letterCount": 4, "frequency": 1},
+    {"id": "schoolsupplies_highlighter", "english": "highlighter", "chinese": "荧光笔", "emoji": "🖍️", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈhaɪlaɪtə/", "tags": ["school"], "letterCount": 10, "frequency": 1},
+    {"id": "schoolsupplies_wastebasket", "english": "wastebasket", "chinese": "垃圾桶", "emoji": "🗑️", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈweɪstbɑːskɪt/", "tags": ["school"], "letterCount": 11, "frequency": 1}
+  ]
+}

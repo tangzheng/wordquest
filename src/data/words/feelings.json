@@ -1,0 +1,25 @@
+{
+  "topic": "feelings",
+  "words": [
+    {"id": "feelings_happy", "english": "happy", "chinese": "开心的", "emoji": "😊", "emojiAlt": [], "level": "starters", "phonetic": "/ˈhæpi/", "tags": ["feeling"], "letterCount": 5, "frequency": 1},
+    {"id": "feelings_sad", "english": "sad", "chinese": "伤心的", "emoji": "😢", "emojiAlt": [], "level": "starters", "phonetic": "/sæd/", "tags": ["feeling"], "letterCount": 3, "frequency": 1},
+    {"id": "feelings_angry", "english": "angry", "chinese": "生气的", "emoji": "😠", "emojiAlt": [], "level": "movers", "phonetic": "/ˈæŋɡri/", "tags": ["feeling"], "letterCount": 5, "frequency": 1},
+    {"id": "feelings_scared", "english": "scared", "chinese": "害怕的", "emoji": "😨", "emojiAlt": [], "level": "movers", "phonetic": "/skeəd/", "tags": ["feeling"], "letterCount": 6, "frequency": 1},
+    {"id": "feelings_tired", "english": "tired", "chinese": "累的", "emoji": "😴", "emojiAlt": [], "level": "movers", "phonetic": "/ˈtaɪəd/", "tags": ["feeling"], "letterCount": 5, "frequency": 1},
+    {"id": "feelings_hungry", "english": "hungry", "chinese": "饿的", "emoji": "🍔", "emojiAlt": [], "level": "starters", "phonetic": "/ˈhʌŋɡri/", "tags": ["feeling"], "letterCount": 6, "frequency": 1},
+    {"id": "feelings_thirsty", "english": "thirsty", "chinese": "渴的", "emoji": "🥤", "emojiAlt": [], "level": "movers", "phonetic": "/ˈθɜːsti/", "tags": ["feeling"], "letterCount": 7, "frequency": 1},
+    {"id": "feelings_sick", "english": "sick", "chinese": "生病的", "emoji": "🤒", "emojiAlt": [], "level": "movers", "phonetic": "/sɪk/", "tags": ["feeling", "health"], "letterCount": 4, "frequency": 1},
+    {"id": "feelings_surprised", "english": "surprised", "chinese": "惊讶的", "emoji": "😲", "emojiAlt": [], "level": "flyers", "phonetic": "/səˈpraɪzd/", "tags": ["feeling"], "letterCount": 8, "frequency": 1},
+    {"id": "feelings_excited", "english": "excited", "chinese": "兴奋的", "emoji": "🤩", "emojiAlt": [], "level": "flyers", "phonetic": "/ɪkˈsaɪtɪd/", "tags": ["feeling"], "letterCount": 8, "frequency": 1},
+    {"id": "feelings_bored", "english": "bored", "chinese": "无聊的", "emoji": "😑", "emojiAlt": [], "level": "flyers", "phonetic": "/bɔːd/", "tags": ["feeling"], "letterCount": 5, "frequency": 1},
+    {"id": "feelings_nervous", "english": "nervous", "chinese": "紧张的", "emoji": "😰", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈnɜːvəs/", "tags": ["feeling"], "letterCount": 7, "frequency": 1},
+    {"id": "feelings_proud", "english": "proud", "chinese": "自豪的", "emoji": "😎", "emojiAlt": [], "level": "flyers", "phonetic": "/praʊd/", "tags": ["feeling"], "letterCount": 5, "frequency": 1},
+    {"id": "feelings_shy", "english": "shy", "chinese": "害羞的", "emoji": "😳", "emojiAlt": [], "level": "movers", "phonetic": "/ʃaɪ/", "tags": ["feeling"], "letterCount": 3, "frequency": 1},
+    {"id": "feelings_confused", "english": "confused", "chinese": "困惑的", "emoji": "😕", "emojiAlt": [], "level": "flyers", "phonetic": "/kənˈfjuːzd/", "tags": ["feeling"], "letterCount": 8, "frequency": 1},
+    {"id": "feelings_worried", "english": "worried", "chinese": "担心的", "emoji": "😟", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈwʌrɪd/", "tags": ["feeling"], "letterCount": 7, "frequency": 1},
+    {"id": "feelings_relieved", "english": "relieved", "chinese": "放心的", "emoji": "😌", "emojiAlt": [], "level": "flyers", "phonetic": "/rɪˈliːvd/", "tags": ["feeling"], "letterCount": 8, "frequency": 1},
+    {"id": "feelings_love", "english": "love", "chinese": "爱", "emoji": "❤️", "emojiAlt": [], "level": "starters", "phonetic": "/lʌv/", "tags": ["feeling"], "letterCount": 4, "frequency": 1},
+    {"id": "feelings_hate", "english": "hate", "chinese": "讨厌", "emoji": "😡", "emojiAlt": [], "level": "movers", "phonetic": "/heɪt/", "tags": ["feeling"], "letterCount": 4, "frequency": 1},
+    {"id": "feelings_jealous", "english": "jealous", "chinese": "嫉妒的", "emoji": "😤", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈdʒeləs/", "tags": ["feeling"], "letterCount": 7, "frequency": 1}
+  ]
+}

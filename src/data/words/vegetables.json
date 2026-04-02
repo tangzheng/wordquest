@@ -1,0 +1,25 @@
+{
+  "topic": "vegetables",
+  "words": [
+    {"id": "vegetables_tomato", "english": "tomato", "chinese": "西红柿", "emoji": "🍅", "emojiAlt": [], "level": "starters", "phonetic": "/təˈmɑːtəʊ/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "vegetables_potato", "english": "potato", "chinese": "土豆", "emoji": "🥔", "emojiAlt": [], "level": "starters", "phonetic": "/pəˈteɪtəʊ/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "vegetables_carrot", "english": "carrot", "chinese": "胡萝卜", "emoji": "🥕", "emojiAlt": [], "level": "starters", "phonetic": "/ˈkærət/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "vegetables_onion", "english": "onion", "chinese": "洋葱", "emoji": "🧅", "emojiAlt": [], "level": "movers", "phonetic": "/ˈʌnjən/", "tags": ["food"], "letterCount": 5, "frequency": 1},
+    {"id": "vegetables_garlic", "english": "garlic", "chinese": "大蒜", "emoji": "🧄", "emojiAlt": [], "level": "movers", "phonetic": "/ˈɡɑːlɪk/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "vegetables_cabbage", "english": "cabbage", "chinese": "卷心菜", "emoji": "🥬", "emojiAlt": [], "level": "movers", "phonetic": "/ˈkæbɪdʒ/", "tags": ["food"], "letterCount": 7, "frequency": 1},
+    {"id": "vegetables_lettuce", "english": "lettuce", "chinese": "生菜", "emoji": "🥬", "emojiAlt": [], "level": "movers", "phonetic": "/ˈletɪs/", "tags": ["food"], "letterCount": 7, "frequency": 1},
+    {"id": "vegetables_cucumber", "english": "cucumber", "chinese": "黄瓜", "emoji": "🥒", "emojiAlt": [], "level": "movers", "phonetic": "/ˈkjuːkʌmbə/", "tags": ["food"], "letterCount": 8, "frequency": 1},
+    {"id": "vegetables_pepper", "english": "pepper", "chinese": "辣椒", "emoji": "🌶️", "emojiAlt": [], "level": "movers", "phonetic": "/ˈpepə/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "vegetables_corn", "english": "corn", "chinese": "玉米", "emoji": "🌽", "emojiAlt": [], "level": "starters", "phonetic": "/kɔːn/", "tags": ["food"], "letterCount": 4, "frequency": 1},
+    {"id": "vegetables_eggplant", "english": "eggplant", "chinese": "茄子", "emoji": "🍆", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈeɡplɑːnt/", "tags": ["food"], "letterCount": 8, "frequency": 1},
+    {"id": "vegetables_mushroom", "english": "mushroom", "chinese": "蘑菇", "emoji": "🍄", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈmʌʃrʊm/", "tags": ["food"], "letterCount": 9, "frequency": 1},
+    {"id": "vegetables_broccoli", "english": "broccoli", "chinese": "西兰花", "emoji": "🥦", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈbrɒkəli/", "tags": ["food"], "letterCount": 8, "frequency": 1},
+    {"id": "vegetables_spinach", "english": "spinach", "chinese": "菠菜", "emoji": "🥬", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈspɪnɪtʃ/", "tags": ["food"], "letterCount": 7, "frequency": 1},
+    {"id": "vegetables_bean", "english": "bean", "chinese": "豆子", "emoji": "🫘", "emojiAlt": [], "level": "starters", "phonetic": "/biːn/", "tags": ["food"], "letterCount": 4, "frequency": 1},
+    {"id": "vegetables_peas", "english": "peas", "chinese": "豌豆", "emoji": "🫛", "emojiAlt": [], "level": "movers", "phonetic": "/piːz/", "tags": ["food"], "letterCount": 4, "frequency": 1},
+    {"id": "vegetables_celery", "english": "celery", "chinese": "芹菜", "emoji": "🥬", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈseləri/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "vegetables_pumpkin", "english": "pumpkin", "chinese": "南瓜", "emoji": "🎃", "emojiAlt": [], "level": "movers", "phonetic": "/ˈpʌmpkɪn/", "tags": ["food"], "letterCount": 7, "frequency": 1},
+    {"id": "vegetables_ginger", "english": "ginger", "chinese": "姜", "emoji": "🫚", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈdʒɪndʒə/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "vegetables_bokchoy", "english": "bok choy", "chinese": "白菜", "emoji": "🥬", "emojiAlt": [], "level": "flyers", "phonetic": "/bɒk tʃɔɪ/", "tags": ["food"], "letterCount": 8, "frequency": 1}
+  ]
+}
