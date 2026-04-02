@@ -186,7 +186,7 @@ export function AlphabetHomeScreen() {
               transition={{ delay: i * 0.02 }}
             >
               <div
-                onClick={() => speak(letter.letter)}
+                onClick={() => speak(letter.speakText)}
                 style={{
                   width: '56px',
                   height: '56px',

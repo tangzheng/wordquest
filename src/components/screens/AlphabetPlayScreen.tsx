@@ -60,12 +60,12 @@ export function AlphabetPlayScreen() {
   // Auto-play sound in sound mode
   useEffect(() => {
     if (isSoundMode && currentLetter && !isRevealing) {
-      speak(currentLetter.letter);
+      speak(currentLetter.speakText);
     }
   }, [currentLetter, isSoundMode, isRevealing, speak]);
 
   const speakLetter = useCallback((letter: AlphabetLetter) => {
-    speak(letter.letter);
+    speak(letter.speakText);
   }, [speak]);
 
   const handleSelect = useCallback(
