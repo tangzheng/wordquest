@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import type { AnswerResult, Word, GameMode } from '@/types';
 import { getWordById } from '@/data/words';
+import { ALPHABET_DATA } from '@/data/alphabet';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { StarRating } from '@/components/ui/StarRating';
@@ -18,6 +19,7 @@ interface ResultsState {
   mode: GameMode;
   words: Word[];
   newBadges?: string[];
+  isAlphabet?: boolean;
 }
 
 export function ResultsScreen() {
@@ -80,7 +82,7 @@ export function ResultsScreen() {
     );
   }
 
-  const { answers, stars, accuracy, topic, mode } = state;
+  const { answers, stars, accuracy, topic, mode, isAlphabet } = state;
   const correctCount = answers.filter((a) => a.correct).length;
 
   const messages = [
@@ -200,7 +202,7 @@ export function ResultsScreen() {
           </Card>
         </motion.div>
 
-        {/* Word review */}
+        {/* Word/Letter review */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -208,38 +210,76 @@ export function ResultsScreen() {
           style={{ width: '100%', maxWidth: '400px' }}
         >
           <h3 style={{ marginBottom: 'var(--space-sm)', fontSize: 'var(--font-size-md)' }}>
-            单词回顾
+            {isAlphabet ? '字母回顾' : '单词回顾'}
           </h3>
           {answers.map((answer, i) => {
-            const word = getWordById(answer.wordId);
-            if (!word) return null;
-            return (
-              <div
-                key={answer.wordId}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 'var(--space-sm)',
-                  padding: 'var(--space-sm)',
-                  marginBottom: i < answers.length - 1 ? '4px' : '0',
-                  borderRadius: 'var(--radius-md)',
-                  backgroundColor: answer.correct
-                    ? 'rgba(81,207,102,0.08)'
-                    : 'rgba(255,135,135,0.08)',
-                }}
-              >
-                <span style={{ fontSize: '20px' }}>
-                  {answer.correct ? '✅' : '❌'}
-                </span>
-                <span style={{ fontSize: '20px' }}>{word.emoji}</span>
-                <span style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--font-size-md)', flex: 1 }}>
-                  {word.english}
-                </span>
-                <span style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-text-light)' }}>
-                  {word.chinese}
-                </span>
-              </div>
-            );
+            if (isAlphabet) {
+              // Alphabet mode: answer has letterId
+              const letterId = (answer as any).letterId;
+              const letter = ALPHABET_DATA.find((l) => l.id === letterId);
+              if (!letter) return null;
+              return (
+                <div
+                  key={letterId}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 'var(--space-sm)',
+                    padding: 'var(--space-sm)',
+                    marginBottom: i < answers.length - 1 ? '4px' : '0',
+                    borderRadius: 'var(--radius-md)',
+                    backgroundColor: answer.correct
+                      ? 'rgba(81,207,102,0.08)'
+                      : 'rgba(255,135,135,0.08)',
+                  }}
+                >
+                  <span style={{ fontSize: '20px' }}>
+                    {answer.correct ? '✅' : '❌'}
+                  </span>
+                  <span style={{ fontSize: '28px', fontWeight: 'bold', color: letter.color }}>
+                    {letter.letter}
+                  </span>
+                  <span style={{ fontSize: '20px' }}>{letter.emoji}</span>
+                  <span style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--font-size-md)', flex: 1 }}>
+                    {letter.keyword}
+                  </span>
+                  <span style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-text-light)' }}>
+                    {letter.keywordChinese}
+                  </span>
+                </div>
+              );
+            } else {
+              // Word mode
+              const word = getWordById(answer.wordId);
+              if (!word) return null;
+              return (
+                <div
+                  key={answer.wordId}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 'var(--space-sm)',
+                    padding: 'var(--space-sm)',
+                    marginBottom: i < answers.length - 1 ? '4px' : '0',
+                    borderRadius: 'var(--radius-md)',
+                    backgroundColor: answer.correct
+                      ? 'rgba(81,207,102,0.08)'
+                      : 'rgba(255,135,135,0.08)',
+                  }}
+                >
+                  <span style={{ fontSize: '20px' }}>
+                    {answer.correct ? '✅' : '❌'}
+                  </span>
+                  <span style={{ fontSize: '20px' }}>{word.emoji}</span>
+                  <span style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--font-size-md)', flex: 1 }}>
+                    {word.english}
+                  </span>
+                  <span style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-text-light)' }}>
+                    {word.chinese}
+                  </span>
+                </div>
+              );
+            }
           })}
         </motion.div>
 
@@ -256,21 +296,43 @@ export function ResultsScreen() {
             maxWidth: '300px',
           }}
         >
-          <Button
-            onClick={() => navigate(`/play/${topic}/${mode}`, { replace: true })}
-            color="var(--color-primary)"
-            fullWidth
-            size="large"
-          >
-            再玩一次 🔄
-          </Button>
-          <Button
-            onClick={() => navigate(`/mode/${topic}`, { replace: true })}
-            color="var(--color-secondary)"
-            fullWidth
-          >
-            换个模式
-          </Button>
+          {isAlphabet ? (
+            <>
+              <Button
+                onClick={() => navigate(`/alphabet/${mode}`, { replace: true })}
+                color="var(--color-primary)"
+                fullWidth
+                size="large"
+              >
+                再玩一次 🔄
+              </Button>
+              <Button
+                onClick={() => navigate('/alphabet', { replace: true })}
+                color="var(--color-secondary)"
+                fullWidth
+              >
+                换个模式
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button
+                onClick={() => navigate(`/play/${topic}/${mode}`, { replace: true })}
+                color="var(--color-primary)"
+                fullWidth
+                size="large"
+              >
+                再玩一次 🔄
+              </Button>
+              <Button
+                onClick={() => navigate(`/mode/${topic}`, { replace: true })}
+                color="var(--color-secondary)"
+                fullWidth
+              >
+                换个模式
+              </Button>
+            </>
+          )}
           <Button
             onClick={() => navigate('/', { replace: true })}
             color="transparent"

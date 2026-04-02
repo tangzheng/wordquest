@@ -6,6 +6,8 @@ import { GamePlayScreen } from '@/components/screens/GamePlayScreen';
 import { ResultsScreen } from '@/components/screens/ResultsScreen';
 import { ProgressScreen } from '@/components/screens/ProgressScreen';
 import { SettingsScreen } from '@/components/screens/SettingsScreen';
+import { AlphabetHomeScreen } from '@/components/screens/AlphabetHomeScreen';
+import { AlphabetPlayScreen } from '@/components/screens/AlphabetPlayScreen';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/results" element={<ResultsScreen />} />
         <Route path="/progress" element={<ProgressScreen />} />
         <Route path="/settings" element={<SettingsScreen />} />
+        <Route path="/alphabet" element={<AlphabetHomeScreen />} />
+        <Route path="/alphabet/:mode" element={<AlphabetPlayScreen />} />
       </Routes>
     </BrowserRouter>
   );
