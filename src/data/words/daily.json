@@ -1,0 +1,30 @@
+{
+  "topic": "daily",
+  "words": [
+    {"id": "daily_morning", "english": "morning", "chinese": "早上", "emoji": "🌅", "emojiAlt": [], "level": "starters", "phonetic": "/ˈmɔːnɪŋ/", "tags": ["time"], "letterCount": 7, "frequency": 1},
+    {"id": "daily_noon", "english": "noon", "chinese": "中午", "emoji": "☀️", "emojiAlt": [], "level": "starters", "phonetic": "/nuːn/", "tags": ["time"], "letterCount": 4, "frequency": 1},
+    {"id": "daily_afternoon", "english": "afternoon", "chinese": "下午", "emoji": "🌤️", "emojiAlt": [], "level": "starters", "phonetic": "/ˌɑːftəˈnuːn/", "tags": ["time"], "letterCount": 9, "frequency": 1},
+    {"id": "daily_evening", "english": "evening", "chinese": "晚上", "emoji": "🌆", "emojiAlt": [], "level": "starters", "phonetic": "/ˈiːvnɪŋ/", "tags": ["time"], "letterCount": 8, "frequency": 1},
+    {"id": "daily_night", "english": "night", "chinese": "夜晚", "emoji": "🌙", "emojiAlt": [], "level": "starters", "phonetic": "/naɪt/", "tags": ["time"], "letterCount": 5, "frequency": 1},
+    {"id": "daily_today", "english": "today", "chinese": "今天", "emoji": "📅", "emojiAlt": [], "level": "starters", "phonetic": "/təˈdeɪ/", "tags": ["time"], "letterCount": 5, "frequency": 1},
+    {"id": "daily_tomorrow", "english": "tomorrow", "chinese": "明天", "emoji": "📆", "emojiAlt": [], "level": "starters", "phonetic": "/təˈmɒrəʊ/", "tags": ["time"], "letterCount": 8, "frequency": 1},
+    {"id": "daily_yesterday", "english": "yesterday", "chinese": "昨天", "emoji": "📅", "emojiAlt": [], "level": "movers", "phonetic": "/ˈjestədeɪ/", "tags": ["time"], "letterCount": 9, "frequency": 1},
+    {"id": "daily_week", "english": "week", "chinese": "周", "emoji": "📅", "emojiAlt": [], "level": "starters", "phonetic": "/wiːk/", "tags": ["time"], "letterCount": 4, "frequency": 1},
+    {"id": "daily_month", "english": "month", "chinese": "月", "emoji": "📅", "emojiAlt": [], "level": "movers", "phonetic": "/mʌnθ/", "tags": ["time"], "letterCount": 5, "frequency": 1},
+    {"id": "daily_year", "english": "year", "chinese": "年", "emoji": "🗓️", "emojiAlt": [], "level": "starters", "phonetic": "/jɪə/", "tags": ["time"], "letterCount": 4, "frequency": 1},
+    {"id": "daily_breakfast", "english": "breakfast", "chinese": "早餐", "emoji": "🍳", "emojiAlt": [], "level": "starters", "phonetic": "/ˈbrekfəst/", "tags": ["food"], "letterCount": 9, "frequency": 1},
+    {"id": "daily_lunch", "english": "lunch", "chinese": "午餐", "emoji": "🍔", "emojiAlt": [], "level": "starters", "phonetic": "/lʌntʃ/", "tags": ["food"], "letterCount": 5, "frequency": 1},
+    {"id": "daily_dinner", "english": "dinner", "chinese": "晚餐", "emoji": "🍽️", "emojiAlt": [], "level": "starters", "phonetic": "/ˈdɪnə/", "tags": ["food"], "letterCount": 6, "frequency": 1},
+    {"id": "daily_wakeup", "english": "wake up", "chinese": "起床", "emoji": "⏰", "emojiAlt": [], "level": "starters", "phonetic": "/weɪk ʌp/", "tags": ["action"], "letterCount": 7, "frequency": 1},
+    {"id": "daily_sleep", "english": "sleep", "chinese": "睡觉", "emoji": "😴", "emojiAlt": [], "level": "starters", "phonetic": "/sliːp/", "tags": ["action"], "letterCount": 5, "frequency": 1},
+    {"id": "daily_wash", "english": "wash", "chinese": "洗", "emoji": "🧼", "emojiAlt": [], "level": "starters", "phonetic": "/wɒʃ/", "tags": ["action"], "letterCount": 4, "frequency": 1},
+    {"id": "daily_brush", "english": "brush", "chinese": "刷", "emoji": "🪥", "emojiAlt": [], "level": "starters", "phonetic": "/brʌʃ/", "tags": ["action"], "letterCount": 5, "frequency": 1},
+    {"id": "daily_eat", "english": "eat", "chinese": "吃", "emoji": "🍽️", "emojiAlt": [], "level": "starters", "phonetic": "/iːt/", "tags": ["action"], "letterCount": 3, "frequency": 1},
+    {"id": "daily_drink", "english": "drink", "chinese": "喝", "emoji": "🥤", "emojiAlt": [], "level": "starters", "phonetic": "/drɪŋk/", "tags": ["action"], "letterCount": 5, "frequency": 1},
+    {"id": "daily_walk", "english": "walk", "chinese": "走", "emoji": "🚶", "emojiAlt": [], "level": "starters", "phonetic": "/wɔːk/", "tags": ["action"], "letterCount": 4, "frequency": 1},
+    {"id": "daily_run", "english": "run", "chinese": "跑", "emoji": "🏃", "emojiAlt": [], "level": "starters", "phonetic": "/rʌn/", "tags": ["action"], "letterCount": 3, "frequency": 1},
+    {"id": "daily_play", "english": "play", "chinese": "玩", "emoji": "🎮", "emojiAlt": [], "level": "starters", "phonetic": "/pleɪ/", "tags": ["action"], "letterCount": 4, "frequency": 1},
+    {"id": "daily_study", "english": "study", "chinese": "学习", "emoji": "📖", "emojiAlt": [], "level": "starters", "phonetic": "/ˈstʌdi/", "tags": ["action"], "letterCount": 5, "frequency": 1},
+    {"id": "daily_homework", "english": "homework", "chinese": "作业", "emoji": "📝", "emojiAlt": [], "level": "starters", "phonetic": "/ˈhəʊmwɜːk/", "tags": ["school"], "letterCount": 8, "frequency": 1}
+  ]
+}

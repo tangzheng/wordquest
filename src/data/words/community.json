@@ -1,0 +1,30 @@
+{
+  "topic": "community",
+  "words": [
+    {"id": "community_hospital", "english": "hospital", "chinese": "医院", "emoji": "🏥", "emojiAlt": [], "level": "movers", "phonetic": "/ˈhɒspɪtəl/", "tags": ["place"], "letterCount": 8, "frequency": 1},
+    {"id": "community_police", "english": "police", "chinese": "警察", "emoji": "🚓", "emojiAlt": [], "level": "movers", "phonetic": "/pəˈliːs/", "tags": ["job"], "letterCount": 6, "frequency": 1},
+    {"id": "community_fire", "english": "fire station", "chinese": "消防站", "emoji": "🚒", "emojiAlt": [], "level": "movers", "phonetic": "/faɪə ˈsteɪʃən/", "tags": ["place"], "letterCount": 11, "frequency": 1},
+    {"id": "community_post", "english": "post office", "chinese": "邮局", "emoji": "📮", "emojiAlt": [], "level": "movers", "phonetic": "/pəʊst ˈɒfɪs/", "tags": ["place"], "letterCount": 10, "frequency": 1},
+    {"id": "community_bank", "english": "bank", "chinese": "银行", "emoji": "🏦", "emojiAlt": [], "level": "movers", "phonetic": "/bæŋk/", "tags": ["place"], "letterCount": 4, "frequency": 1},
+    {"id": "community_restaurant", "english": "restaurant", "chinese": "餐厅", "emoji": "🍽️", "emojiAlt": [], "level": "movers", "phonetic": "/ˈrestərɒnt/", "tags": ["place"], "letterCount": 10, "frequency": 1},
+    {"id": "community_hotel", "english": "hotel", "chinese": "酒店", "emoji": "🏨", "emojiAlt": [], "level": "flyers", "phonetic": "/həʊˈtel/", "tags": ["place"], "letterCount": 5, "frequency": 1},
+    {"id": "community_museum", "english": "museum", "chinese": "博物馆", "emoji": "🏛️", "emojiAlt": [], "level": "flyers", "phonetic": "/mjuˈziːəm/", "tags": ["place"], "letterCount": 6, "frequency": 1},
+    {"id": "community_theater", "english": "theater", "chinese": "剧院", "emoji": "🎭", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈθɪətə/", "tags": ["place"], "letterCount": 7, "frequency": 1},
+    {"id": "community_cinema", "english": "cinema", "chinese": "电影院", "emoji": "🎬", "emojiAlt": [], "level": "movers", "phonetic": "/ˈsɪnəmə/", "tags": ["place"], "letterCount": 6, "frequency": 1},
+    {"id": "community_stadium", "english": "stadium", "chinese": "体育场", "emoji": "🏟️", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈsteɪdiəm/", "tags": ["place"], "letterCount": 7, "frequency": 1},
+    {"id": "community_park", "english": "park", "chinese": "公园", "emoji": "🌳", "emojiAlt": [], "level": "starters", "phonetic": "/pɑːk/", "tags": ["place"], "letterCount": 4, "frequency": 1},
+    {"id": "community_garden", "english": "garden", "chinese": "花园", "emoji": "🌷", "emojiAlt": [], "level": "starters", "phonetic": "/ˈɡɑːdən/", "tags": ["place"], "letterCount": 6, "frequency": 1},
+    {"id": "community_zoo", "english": "zoo", "chinese": "动物园", "emoji": "🦓", "emojiAlt": [], "level": "starters", "phonetic": "/zuː/", "tags": ["place"], "letterCount": 3, "frequency": 1},
+    {"id": "community_supermarket", "english": "supermarket", "chinese": "超市", "emoji": "🏪", "emojiAlt": [], "level": "movers", "phonetic": "/ˈsuːpəmɑːkɪt/", "tags": ["place"], "letterCount": 11, "frequency": 1},
+    {"id": "community_shop", "english": "shop", "chinese": "商店", "emoji": "🏪", "emojiAlt": [], "level": "starters", "phonetic": "/ʃɒp/", "tags": ["place"], "letterCount": 4, "frequency": 1},
+    {"id": "community_market", "english": "market", "chinese": "市场", "emoji": "🏬", "emojiAlt": [], "level": "movers", "phonetic": "/ˈmɑːkɪt/", "tags": ["place"], "letterCount": 6, "frequency": 1},
+    {"id": "community_station", "english": "station", "chinese": "车站", "emoji": "🚉", "emojiAlt": [], "level": "movers", "phonetic": "/ˈsteɪʃən/", "tags": ["place"], "letterCount": 7, "frequency": 1},
+    {"id": "community_airport", "english": "airport", "chinese": "机场", "emoji": "✈️", "emojiAlt": [], "level": "movers", "phonetic": "/ˈeəpɔːt/", "tags": ["place"], "letterCount": 7, "frequency": 1},
+    {"id": "community_bridge", "english": "bridge", "chinese": "桥", "emoji": "🌉", "emojiAlt": [], "level": "flyers", "phonetic": "/brɪdʒ/", "tags": ["place"], "letterCount": 6, "frequency": 1},
+    {"id": "community_tower", "english": "tower", "chinese": "塔", "emoji": "🗼", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈtaʊə/", "tags": ["place"], "letterCount": 5, "frequency": 1},
+    {"id": "community_castle", "english": "castle", "chinese": "城堡", "emoji": "🏰", "emojiAlt": [], "level": "movers", "phonetic": "/ˈkɑːsəl/", "tags": ["place"], "letterCount": 6, "frequency": 1},
+    {"id": "community_temple", "english": "temple", "chinese": "寺庙", "emoji": "🛕", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈtempəl/", "tags": ["place"], "letterCount": 6, "frequency": 1},
+    {"id": "community_church", "english": "church", "chinese": "教堂", "emoji": "⛪", "emojiAlt": [], "level": "flyers", "phonetic": "/tʃɜːtʃ/", "tags": ["place"], "letterCount": 6, "frequency": 1},
+    {"id": "community_palace", "english": "palace", "chinese": "宫殿", "emoji": "🏯", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈpæləs/", "tags": ["place"], "letterCount": 7, "frequency": 1}
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "topic": "technology",
+  "words": [
+    {"id": "technology_phone", "english": "phone", "chinese": "手机", "emoji": "📱", "emojiAlt": [], "level": "starters", "phonetic": "/fəʊn/", "tags": ["electronics"], "letterCount": 5, "frequency": 1},
+    {"id": "technology_computer", "english": "computer", "chinese": "电脑", "emoji": "💻", "emojiAlt": [], "level": "movers", "phonetic": "/kəmˈpjuːtə/", "tags": ["electronics"], "letterCount": 9, "frequency": 1},
+    {"id": "technology_tablet", "english": "tablet", "chinese": "平板电脑", "emoji": "📱", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈtæblət/", "tags": ["electronics"], "letterCount": 6, "frequency": 1},
+    {"id": "technology_laptop", "english": "laptop", "chinese": "笔记本电脑", "emoji": "💻", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈlæptɒp/", "tags": ["electronics"], "letterCount": 6, "frequency": 1},
+    {"id": "technology_television", "english": "television", "chinese": "电视", "emoji": "📺", "emojiAlt": [], "level": "movers", "phonetic": "/ˈtelɪvɪʒən/", "tags": ["electronics"], "letterCount": 10, "frequency": 1},
+    {"id": "technology_camera", "english": "camera", "chinese": "相机", "emoji": "📷", "emojiAlt": [], "level": "movers", "phonetic": "/ˈkæmərə/", "tags": ["electronics"], "letterCount": 6, "frequency": 1},
+    {"id": "technology_radio", "english": "radio", "chinese": "收音机", "emoji": "📻", "emojiAlt": [], "level": "movers", "phonetic": "/ˈreɪdiəʊ/", "tags": ["electronics"], "letterCount": 5, "frequency": 1},
+    {"id": "technology_music", "english": "music player", "chinese": "音乐播放器", "emoji": "🎵", "emojiAlt": [], "level": "movers", "phonetic": "/ˈmjuːzɪk ˈpleɪə/", "tags": ["electronics"], "letterCount": 11, "frequency": 1},
+    {"id": "technology_game", "english": "game controller", "chinese": "游戏手柄", "emoji": "🎮", "emojiAlt": [], "level": "movers", "phonetic": "/ɡeɪm kənˈtroʊlə/", "tags": ["electronics"], "letterCount": 14, "frequency": 1},
+    {"id": "technology_internet", "english": "Internet", "chinese": "互联网", "emoji": "🌐", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈɪntənet/", "tags": ["technology"], "letterCount": 9, "frequency": 1},
+    {"id": "technology_email", "english": "email", "chinese": "电子邮件", "emoji": "📧", "emojiAlt": [], "level": "movers", "phonetic": "/ˈiːmeɪl/", "tags": ["technology"], "letterCount": 5, "frequency": 1},
+    {"id": "technology_keyboard", "english": "keyboard", "chinese": "键盘", "emoji": "⌨️", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈkiːbɔːd/", "tags": ["electronics"], "letterCount": 8, "frequency": 1},
+    {"id": "technology_mouse", "english": "mouse", "chinese": "鼠标", "emoji": "🖱️", "emojiAlt": [], "level": "flyers", "phonetic": "/maʊs/", "tags": ["electronics"], "letterCount": 5, "frequency": 1},
+    {"id": "technology_screen", "english": "screen", "chinese": "屏幕", "emoji": "🖥️", "emojiAlt": [], "level": "movers", "phonetic": "/skriːn/", "tags": ["electronics"], "letterCount": 6, "frequency": 1},
+    {"id": "technology_printer", "english": "printer", "chinese": "打印机", "emoji": "🖨️", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈprɪntə/", "tags": ["electronics"], "letterCount": 7, "frequency": 1},
+    {"id": "technology_charger", "english": "charger", "chinese": "充电器", "emoji": "🔌", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈtʃɑːdʒə/", "tags": ["electronics"], "letterCount": 7, "frequency": 1},
+    {"id": "technology_battery", "english": "battery", "chinese": "电池", "emoji": "🔋", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈbætri/", "tags": ["electronics"], "letterCount": 7, "frequency": 1},
+    {"id": "technology_usb", "english": "USB", "chinese": "U盘", "emoji": "💾", "emojiAlt": [], "level": "flyers", "phonetic": "/ˌjuː es ˈbiː/", "tags": ["electronics"], "letterCount": 3, "frequency": 1},
+    {"id": "technology_wifi", "english": "WiFi", "chinese": "无线网络", "emoji": "📶", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈwaɪfaɪ/", "tags": ["technology"], "letterCount": 4, "frequency": 1},
+    {"id": "technology_app", "english": "app", "chinese": "应用程序", "emoji": "📲", "emojiAlt": [], "level": "flyers", "phonetic": "/æp/", "tags": ["technology"], "letterCount": 3, "frequency": 1}
+  ]
+}

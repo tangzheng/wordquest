@@ -1,0 +1,25 @@
+{
+  "topic": "beach",
+  "words": [
+    {"id": "beach_sea", "english": "sea", "chinese": "海", "emoji": "🌊", "emojiAlt": [], "level": "starters", "phonetic": "/siː/", "tags": ["nature"], "letterCount": 3, "frequency": 1},
+    {"id": "beach_beach", "english": "beach", "chinese": "海滩", "emoji": "🏖️", "emojiAlt": [], "level": "starters", "phonetic": "/biːtʃ/", "tags": ["place"], "letterCount": 5, "frequency": 1},
+    {"id": "beach_shell", "english": "shell", "chinese": "贝壳", "emoji": "🐚", "emojiAlt": [], "level": "movers", "phonetic": "/ʃel/", "tags": ["object"], "letterCount": 5, "frequency": 1},
+    {"id": "beach_sandcastle", "english": "sandcastle", "chinese": "沙堡", "emoji": "🏰", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈsændkɑːsəl/", "tags": ["object"], "letterCount": 10, "frequency": 1},
+    {"id": "beach_sun", "english": "sun", "chinese": "太阳", "emoji": "☀️", "emojiAlt": [], "level": "starters", "phonetic": "/sʌn/", "tags": ["nature"], "letterCount": 3, "frequency": 1},
+    {"id": "beach_shark", "english": "shark", "chinese": "鲨鱼", "emoji": "🦈", "emojiAlt": [], "level": "movers", "phonetic": "/ʃɑːk/", "tags": ["animal"], "letterCount": 5, "frequency": 1},
+    {"id": "beach_crabs", "english": "crab", "chinese": "螃蟹", "emoji": "🦀", "emojiAlt": [], "level": "movers", "phonetic": "/kræb/", "tags": ["animal"], "letterCount": 4, "frequency": 1},
+    {"id": "beach_starfish", "english": "starfish", "chinese": "海星", "emoji": "⭐", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈstɑːfɪʃ/", "tags": ["animal"], "letterCount": 8, "frequency": 1},
+    {"id": "beach_dolphin", "english": "dolphin", "chinese": "海豚", "emoji": "🐬", "emojiAlt": [], "level": "movers", "phonetic": "/ˈdɒlfɪn/", "tags": ["animal"], "letterCount": 7, "frequency": 1},
+    {"id": "beach_whale", "english": "whale", "chinese": "鲸鱼", "emoji": "🐋", "emojiAlt": [], "level": "movers", "phonetic": "/weɪl/", "tags": ["animal"], "letterCount": 5, "frequency": 1},
+    {"id": "beach_jellyfish", "english": "jellyfish", "chinese": "水母", "emoji": "🪼", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈdʒelifɪʃ/", "tags": ["animal"], "letterCount": 10, "frequency": 1},
+    {"id": "beach_towel", "english": "towel", "chinese": "毛巾", "emoji": "🏖️", "emojiAlt": [], "level": "movers", "phonetic": "/ˈtaʊəl/", "tags": ["object"], "letterCount": 5, "frequency": 1},
+    {"id": "beach_umbrella", "english": "beach umbrella", "chinese": "太阳伞", "emoji": "⛱️", "emojiAlt": [], "level": "movers", "phonetic": "/biːtʃ ʌmˈbrelə/", "tags": ["object"], "letterCount": 13, "frequency": 1},
+    {"id": "beach_swimsuit", "english": "swimsuit", "chinese": "泳衣", "emoji": "👙", "emojiAlt": [], "level": "movers", "phonetic": "/ˈswɪmsuːt/", "tags": ["clothing"], "letterCount": 8, "frequency": 1},
+    {"id": "beach_sunscreen", "english": "sunscreen", "chinese": "防晒霜", "emoji": "🧴", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈsʌnskriːn/", "tags": ["object"], "letterCount": 10, "frequency": 1},
+    {"id": "beach_sunglasses", "english": "sunglasses", "chinese": "太阳镜", "emoji": "🕶️", "emojiAlt": [], "level": "movers", "phonetic": "/ˈsʌnɡlɑːsɪz/", "tags": ["accessories"], "letterCount": 10, "frequency": 1},
+    {"id": "beach_bucket", "english": "bucket", "chinese": "水桶", "emoji": "🪣", "emojiAlt": [], "level": "movers", "phonetic": "/ˈbʌkɪt/", "tags": ["object"], "letterCount": 6, "frequency": 1},
+    {"id": "beach_spade", "english": "spade", "chinese": "铲子", "emoji": "⚙️", "emojiAlt": [], "level": "flyers", "phonetic": "/speɪd/", "tags": ["object"], "letterCount": 5, "frequency": 1},
+    {"id": "beach_ocean", "english": "ocean", "chinese": "海洋", "emoji": "🌊", "emojiAlt": [], "level": "movers", "phonetic": "/ˈəʊʃən/", "tags": ["nature"], "letterCount": 5, "frequency": 1},
+    {"id": "beach_wave", "english": "wave", "chinese": "海浪", "emoji": "🌊", "emojiAlt": [], "level": "movers", "phonetic": "/weɪv/", "tags": ["nature"], "letterCount": 4, "frequency": 1}
+  ]
+}

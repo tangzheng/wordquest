@@ -1,0 +1,23 @@
+{
+  "topic": "classroom",
+  "words": [
+    {"id": "classroom_chair", "english": "chair", "chinese": "椅子", "emoji": "🪑", "emojiAlt": [], "level": "starters", "phonetic": "/tʃeə/", "tags": ["furniture"], "letterCount": 5, "frequency": 1},
+    {"id": "classroom_desk", "english": "desk", "chinese": "课桌", "emoji": "🗄️", "emojiAlt": [], "level": "starters", "phonetic": "/desk/", "tags": ["furniture"], "letterCount": 4, "frequency": 1},
+    {"id": "classroom_blackboard", "english": "blackboard", "chinese": "黑板", "emoji": "⬛", "emojiAlt": [], "level": "starters", "phonetic": "/ˈblækbɔːd/", "tags": ["school"], "letterCount": 10, "frequency": 1},
+    {"id": "classroom_clock", "english": "clock", "chinese": "时钟", "emoji": "🕐", "emojiAlt": [], "level": "starters", "phonetic": "/klɒk/", "tags": ["object"], "letterCount": 5, "frequency": 1},
+    {"id": "classroom_door", "english": "door", "chinese": "门", "emoji": "🚪", "emojiAlt": [], "level": "starters", "phonetic": "/dɔː/", "tags": ["building"], "letterCount": 4, "frequency": 1},
+    {"id": "classroom_window", "english": "window", "chinese": "窗户", "emoji": "🪟", "emojiAlt": [], "level": "starters", "phonetic": "/ˈwɪndəʊ/", "tags": ["building"], "letterCount": 6, "frequency": 1},
+    {"id": "classroom_floor", "english": "floor", "chinese": "地板", "emoji": "🏠", "emojiAlt": [], "level": "starters", "phonetic": "/flɔː/", "tags": ["building"], "letterCount": 5, "frequency": 1},
+    {"id": "classroom_wall", "english": "wall", "chinese": "墙壁", "emoji": "🧱", "emojiAlt": [], "level": "starters", "phonetic": "/wɔːl/", "tags": ["building"], "letterCount": 4, "frequency": 1},
+    {"id": "classroom_board", "english": "board", "chinese": "板", "emoji": "📋", "emojiAlt": [], "level": "starters", "phonetic": "/bɔːd/", "tags": ["school"], "letterCount": 5, "frequency": 1},
+    {"id": "classroom_light", "english": "light", "chinese": "灯", "emoji": "💡", "emojiAlt": [], "level": "starters", "phonetic": "/laɪt/", "tags": ["object"], "letterCount": 5, "frequency": 1},
+    {"id": "classroom_computer", "english": "computer", "chinese": "电脑", "emoji": "💻", "emojiAlt": [], "level": "movers", "phonetic": "/kəmˈpjuːtə/", "tags": ["electronics"], "letterCount": 9, "frequency": 1},
+    {"id": "classroom_projector", "english": "projector", "chinese": "投影仪", "emoji": "📽️", "emojiAlt": [], "level": "flyers", "phonetic": "/prəˈdʒektə/", "tags": ["electronics"], "letterCount": 9, "frequency": 1},
+    {"id": "classroom_screen", "english": "screen", "chinese": "屏幕", "emoji": "🖥️", "emojiAlt": [], "level": "movers", "phonetic": "/skriːn/", "tags": ["electronics"], "letterCount": 6, "frequency": 1},
+    {"id": "classroom_map", "english": "map", "chinese": "地图", "emoji": "🗺️", "emojiAlt": [], "level": "starters", "phonetic": "/mæp/", "tags": ["school"], "letterCount": 3, "frequency": 1},
+    {"id": "classroom_flag", "english": "flag", "chinese": "旗", "emoji": "🚩", "emojiAlt": [], "level": "starters", "phonetic": "/flæɡ/", "tags": ["object"], "letterCount": 4, "frequency": 1},
+    {"id": "classroom_picture", "english": "picture", "chinese": "图片", "emoji": "🖼️", "emojiAlt": [], "level": "starters", "phonetic": "/ˈpɪktʃə/", "tags": ["object"], "letterCount": 7, "frequency": 1},
+    {"id": "classroom_clock", "english": "clock", "chinese": "时钟", "emoji": "🕐", "emojiAlt": [], "level": "starters", "phonetic": "/klɒk/", "tags": ["object"], "letterCount": 5, "frequency": 1},
+    {"id": "classroom_trashcan", "english": "trash can", "chinese": "垃圾桶", "emoji": "🗑️", "emojiAlt": [], "level": "movers", "phonetic": "/træʃ kæn/", "tags": ["object"], "letterCount": 9, "frequency": 1}
+  ]
+}

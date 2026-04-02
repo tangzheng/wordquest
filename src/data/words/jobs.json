@@ -1,0 +1,30 @@
+{
+  "topic": "jobs",
+  "words": [
+    {"id": "jobs_doctor", "english": "doctor", "chinese": "医生", "emoji": "👨‍⚕️", "emojiAlt": [], "level": "movers", "phonetic": "/ˈdɒktə/", "tags": ["job"], "letterCount": 6, "frequency": 1},
+    {"id": "jobs_nurse", "english": "nurse", "chinese": "护士", "emoji": "👩‍⚕️", "emojiAlt": [], "level": "movers", "phonetic": "/nɜːs/", "tags": ["job"], "letterCount": 5, "frequency": 1},
+    {"id": "jobs_teacher", "english": "teacher", "chinese": "老师", "emoji": "👨‍🏫", "emojiAlt": [], "level": "starters", "phonetic": "/ˈtiːtʃə/", "tags": ["job"], "letterCount": 7, "frequency": 1},
+    {"id": "jobs_farmer", "english": "farmer", "chinese": "农民", "emoji": "👨‍🌾", "emojiAlt": [], "level": "movers", "phonetic": "/ˈfɑːmə/", "tags": ["job"], "letterCount": 6, "frequency": 1},
+    {"id": "jobs_cook", "english": "cook", "chinese": "厨师", "emoji": "👨‍🍳", "emojiAlt": [], "level": "movers", "phonetic": "/kʊk/", "tags": ["job"], "letterCount": 4, "frequency": 1},
+    {"id": "jobs_driver", "english": "driver", "chinese": "司机", "emoji": "🚗", "emojiAlt": [], "level": "movers", "phonetic": "/ˈdraɪvə/", "tags": ["job"], "letterCount": 6, "frequency": 1},
+    {"id": "jobs_pilot", "english": "pilot", "chinese": "飞行员", "emoji": "👨‍✈️", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈpaɪlət/", "tags": ["job"], "letterCount": 5, "frequency": 1},
+    {"id": "jobs_soldier", "english": "soldier", "chinese": "士兵", "emoji": "🪖", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈsəʊldʒə/", "tags": ["job"], "letterCount": 7, "frequency": 1},
+    {"id": "jobs_painter", "english": "painter", "chinese": "画家", "emoji": "🧑‍🎨", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈpeɪntə/", "tags": ["job"], "letterCount": 7, "frequency": 1},
+    {"id": "jobs_writer", "english": "writer", "chinese": "作家", "emoji": "✍️", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈraɪtə/", "tags": ["job"], "letterCount": 6, "frequency": 1},
+    {"id": "jobs_singer", "english": "singer", "chinese": "歌手", "emoji": "🎤", "emojiAlt": [], "level": "movers", "phonetic": "/ˈsɪŋə/", "tags": ["job"], "letterCount": 6, "frequency": 1},
+    {"id": "jobs_dancer", "english": "dancer", "chinese": "舞者", "emoji": "💃", "emojiAlt": [], "level": "movers", "phonetic": "/ˈdɑːnsə/", "tags": ["job"], "letterCount": 6, "frequency": 1},
+    {"id": "jobs_actor", "english": "actor", "chinese": "演员", "emoji": "🎭", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈæktə/", "tags": ["job"], "letterCount": 5, "frequency": 1},
+    {"id": "jobs_firefighter", "english": "firefighter", "chinese": "消防员", "emoji": "🚒", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈfaɪəfaɪtə/", "tags": ["job"], "letterCount": 11, "frequency": 1},
+    {"id": "jobs_policeman", "english": "policeman", "chinese": "警察", "emoji": "🚓", "emojiAlt": [], "level": "movers", "phonetic": "/pəˈliːsmən/", "tags": ["job"], "letterCount": 9, "frequency": 1},
+    {"id": "jobs_baker", "english": "baker", "chinese": "面包师", "emoji": "👨‍🍳", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈbeɪkə/", "tags": ["job"], "letterCount": 5, "frequency": 1},
+    {"id": "jobs_waiter", "english": "waiter", "chinese": "服务员", "emoji": "🧑‍🍳", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈweɪtə/", "tags": ["job"], "letterCount": 6, "frequency": 1},
+    {"id": "jobs_scientist", "english": "scientist", "chinese": "科学家", "emoji": "🔬", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈsaɪəntɪst/", "tags": ["job"], "letterCount": 9, "frequency": 1},
+    {"id": "jobs_engineer", "english": "engineer", "chinese": "工程师", "emoji": "👷", "emojiAlt": [], "level": "flyers", "phonetic": "/ˌendʒɪˈnɪə/", "tags": ["job"], "letterCount": 8, "frequency": 1},
+    {"id": "jobs_businessman", "english": "businessman", "chinese": "商人", "emoji": "💼", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈbɪznəsmæn/", "tags": ["job"], "letterCount": 11, "frequency": 1},
+    {"id": "jobs_secretary", "english": "secretary", "chinese": "秘书", "emoji": "📋", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈsekrətri/", "tags": ["job"], "letterCount": 9, "frequency": 1},
+    {"id": "jobs_vet", "english": "vet", "chinese": "兽医", "emoji": "🐾", "emojiAlt": [], "level": "flyers", "phonetic": "/vet/", "tags": ["job"], "letterCount": 3, "frequency": 1},
+    {"id": "jobs_hairdresser", "english": "hairdresser", "chinese": "理发师", "emoji": "💇", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈheədresə/", "tags": ["job"], "letterCount": 11, "frequency": 1},
+    {"id": "jobs_judge", "english": "judge", "chinese": "法官", "emoji": "⚖️", "emojiAlt": [], "level": "flyers", "phonetic": "/dʒʌdʒ/", "tags": ["job"], "letterCount": 5, "frequency": 1},
+    {"id": "jobs_lawyer", "english": "lawyer", "chinese": "律师", "emoji": "⚖️", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈlɔːjə/", "tags": ["job"], "letterCount": 6, "frequency": 1}
+  ]
+}

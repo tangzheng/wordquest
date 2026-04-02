@@ -1,0 +1,25 @@
+{
+  "topic": "camping",
+  "words": [
+    {"id": "camping_tent", "english": "tent", "chinese": "帐篷", "emoji": "⛺", "emojiAlt": [], "level": "movers", "phonetic": "/tent/", "tags": ["camping"], "letterCount": 4, "frequency": 1},
+    {"id": "camping_campfire", "english": "campfire", "chinese": "篝火", "emoji": "🔥", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈkæmpaɪə/", "tags": ["camping"], "letterCount": 8, "frequency": 1},
+    {"id": "camping_backpack", "english": "backpack", "chinese": "背包", "emoji": "🎒", "emojiAlt": [], "level": "movers", "phonetic": "/ˈbækpæk/", "tags": ["camping"], "letterCount": 8, "frequency": 1},
+    {"id": "camping_compass", "english": "compass", "chinese": "指南针", "emoji": "🧭", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈkʌmpəs/", "tags": ["camping"], "letterCount": 7, "frequency": 1},
+    {"id": "camping_flashlight", "english": "flashlight", "chinese": "手电筒", "emoji": "🔦", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈflæʃlaɪt/", "tags": ["camping"], "letterCount": 10, "frequency": 1},
+    {"id": "camping_sleepingbag", "english": "sleeping bag", "chinese": "睡袋", "emoji": "睡袋", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈsliːpɪŋ bæɡ/", "tags": ["camping"], "letterCount": 12, "frequency": 1},
+    {"id": "camping_torch", "english": "torch", "chinese": "火把", "emoji": "🔦", "emojiAlt": [], "level": "flyers", "phonetic": "/tɔːtʃ/", "tags": ["camping"], "letterCount": 5, "frequency": 1},
+    {"id": "camping_map", "english": "map", "chinese": "地图", "emoji": "🗺️", "emojiAlt": [], "level": "starters", "phonetic": "/mæp/", "tags": ["camping"], "letterCount": 3, "frequency": 1},
+    {"id": "camping_hiking", "english": "hiking", "chinese": "徒步", "emoji": "🥾", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈhaɪkɪŋ/", "tags": ["activity"], "letterCount": 6, "frequency": 1},
+    {"id": "camping_fishing", "english": "fishing", "chinese": "钓鱼", "emoji": "🎣", "emojiAlt": [], "level": "movers", "phonetic": "/ˈfɪʃɪŋ/", "tags": ["activity"], "letterCount": 7, "frequency": 1},
+    {"id": "camping_bird", "english": "bird", "chinese": "鸟", "emoji": "🐦", "emojiAlt": [], "level": "starters", "phonetic": "/bɜːd/", "tags": ["animal"], "letterCount": 4, "frequency": 1},
+    {"id": "camping_deer", "english": "deer", "chinese": "鹿", "emoji": "🦌", "emojiAlt": [], "level": "movers", "phonetic": "/dɪə/", "tags": ["animal"], "letterCount": 4, "frequency": 1},
+    {"id": "camping_squirrel", "english": "squirrel", "chinese": "松鼠", "emoji": "🐿️", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈskwɪrəl/", "tags": ["animal"], "letterCount": 8, "frequency": 1},
+    {"id": "camping_rabbit", "english": "rabbit", "chinese": "兔子", "emoji": "🐰", "emojiAlt": [], "level": "starters", "phonetic": "/ˈræbɪt/", "tags": ["animal"], "letterCount": 6, "frequency": 1},
+    {"id": "camping_forest", "english": "forest", "chinese": "森林", "emoji": "🌲", "emojiAlt": [], "level": "movers", "phonetic": "/ˈfɒrɪst/", "tags": ["nature"], "letterCount": 6, "frequency": 1},
+    {"id": "camping_mountain", "english": "mountain", "chinese": "山", "emoji": "⛰️", "emojiAlt": [], "level": "movers", "phonetic": "/ˈmaʊntɪn/", "tags": ["nature"], "letterCount": 8, "frequency": 1},
+    {"id": "camping_river", "english": "river", "chinese": "河流", "emoji": "🏞️", "emojiAlt": [], "level": "movers", "phonetic": "/ˈrɪvə/", "tags": ["nature"], "letterCount": 5, "frequency": 1},
+    {"id": "camping_lake", "english": "lake", "chinese": "湖泊", "emoji": "🏔️", "emojiAlt": [], "level": "movers", "phonetic": "/leɪk/", "tags": ["nature"], "letterCount": 4, "frequency": 1},
+    {"id": "camping_trail", "english": "trail", "chinese": "小径", "emoji": "🛤️", "emojiAlt": [], "level": "flyers", "phonetic": "/treɪl/", "tags": ["place"], "letterCount": 5, "frequency": 1},
+    {"id": "camping_rock", "english": "rock", "chinese": "岩石", "emoji": "🪨", "emojiAlt": [], "level": "movers", "phonetic": "/rɒk/", "tags": ["nature"], "letterCount": 4, "frequency": 1}
+  ]
+}

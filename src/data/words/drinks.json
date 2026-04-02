@@ -1,0 +1,20 @@
+{
+  "topic": "drinks",
+  "words": [
+    {"id": "drinks_water", "english": "water", "chinese": "水", "emoji": "💧", "emojiAlt": [], "level": "starters", "phonetic": "/ˈwɔːtə/", "tags": ["drink"], "letterCount": 5, "frequency": 1},
+    {"id": "drinks_milk", "english": "milk", "chinese": "牛奶", "emoji": "🥛", "emojiAlt": [], "level": "starters", "phonetic": "/mɪlk/", "tags": ["drink"], "letterCount": 4, "frequency": 1},
+    {"id": "drinks_juice", "english": "juice", "chinese": "果汁", "emoji": "🧃", "emojiAlt": [], "level": "starters", "phonetic": "/dʒuːs/", "tags": ["drink"], "letterCount": 5, "frequency": 1},
+    {"id": "drinks_tea", "english": "tea", "chinese": "茶", "emoji": "🍵", "emojiAlt": [], "level": "starters", "phonetic": "/tiː/", "tags": ["drink"], "letterCount": 3, "frequency": 1},
+    {"id": "drinks_coffee", "english": "coffee", "chinese": "咖啡", "emoji": "☕", "emojiAlt": [], "level": "movers", "phonetic": "/ˈkɒfi/", "tags": ["drink"], "letterCount": 6, "frequency": 1},
+    {"id": "drinks_soda", "english": "soda", "chinese": "汽水", "emoji": "🥤", "emojiAlt": [], "level": "movers", "phonetic": "/ˈsəʊdə/", "tags": ["drink"], "letterCount": 4, "frequency": 1},
+    {"id": "drinks_coke", "english": "Coke", "chinese": "可乐", "emoji": "🥤", "emojiAlt": [], "level": "starters", "phonetic": "/kəʊk/", "tags": ["drink"], "letterCount": 4, "frequency": 1},
+    {"id": "drinks_yogurt", "english": "yogurt", "chinese": "酸奶", "emoji": "🥛", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈjəʊɡət/", "tags": ["drink"], "letterCount": 6, "frequency": 1},
+    {"id": "drinks_smoothie", "english": "smoothie", "chinese": "冰沙", "emoji": "🥤", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈsmuːði/", "tags": ["drink"], "letterCount": 8, "frequency": 1},
+    {"id": "drinks_lemonade", "english": "lemonade", "chinese": "柠檬水", "emoji": "🍋", "emojiAlt": [], "level": "flyers", "phonetic": "/ˌleməˈneɪd/", "tags": ["drink"], "letterCount": 9, "frequency": 1},
+    {"id": "drinks_shake", "english": "milkshake", "chinese": "奶昔", "emoji": "🥛", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈmaɪlʃeɪk/", "tags": ["drink"], "letterCount": 9, "frequency": 1},
+    {"id": "drinks_beer", "english": "beer", "chinese": "啤酒", "emoji": "🍺", "emojiAlt": [], "level": "flyers", "phonetic": "/bɪə/", "tags": ["drink"], "letterCount": 4, "frequency": 1},
+    {"id": "drinks_wine", "english": "wine", "chinese": "葡萄酒", "emoji": "🍷", "emojiAlt": [], "level": "flyers", "phonetic": "/waɪn/", "tags": ["drink"], "letterCount": 4, "frequency": 1},
+    {"id": "drinks_hotchocolate", "english": "hot chocolate", "chinese": "热巧克力", "emoji": "☕", "emojiAlt": [], "level": "flyers", "phonetic": "/hɒt ˈtʃɒklət/", "tags": ["drink"], "letterCount": 13, "frequency": 1},
+    {"id": "drinks_bubble", "english": "bubble tea", "chinese": "奶茶", "emoji": "🧋", "emojiAlt": [], "level": "flyers", "phonetic": "/ˈbʌbəl tiː/", "tags": ["drink"], "letterCount": 10, "frequency": 1}
+  ]
+}

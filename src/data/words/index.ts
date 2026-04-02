@@ -24,6 +24,14 @@ import feelingsData from './feelings.json';
 import shapesData from './shapes.json';
 import spaceData from './space.json';
 import schoolsuppliesData from './schoolsupplies.json';
+import classroomData from './classroom.json';
+import dailyData from './daily.json';
+import oppositesData from './opposites.json';
+import communityData from './community.json';
+import technologyData from './technology.json';
+import jobsData from './jobs.json';
+import beachData from './beach.json';
+import campingData from './camping.json';
 import type { Word } from '@/types';
 
 interface WordDataFile {
@@ -62,6 +70,14 @@ export const allWords: Word[] = [
   ...loadTopic(shapesData as WordDataFile),
   ...loadTopic(spaceData as WordDataFile),
   ...loadTopic(schoolsuppliesData as WordDataFile),
+  ...loadTopic(classroomData as WordDataFile),
+  ...loadTopic(dailyData as WordDataFile),
+  ...loadTopic(oppositesData as WordDataFile),
+  ...loadTopic(communityData as WordDataFile),
+  ...loadTopic(technologyData as WordDataFile),
+  ...loadTopic(jobsData as WordDataFile),
+  ...loadTopic(beachData as WordDataFile),
+  ...loadTopic(campingData as WordDataFile),
 ];
 
 export function getWordsByTopic(topicId: string): Word[] {
