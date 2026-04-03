@@ -12,6 +12,7 @@ import { PictureWordMatch } from '@/components/game/PictureWordMatch/PictureWord
 import { ListenAndSpell } from '@/components/game/ListenAndSpell/ListenAndSpell';
 import { WordMatching } from '@/components/game/WordMatching/WordMatching';
 import { ComprehensiveMode } from '@/components/game/ComprehensiveMode/ComprehensiveMode';
+import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
 
 export function GamePlayScreen() {
   const { topicId, mode } = useParams<{ topicId: string; mode: string }>();
@@ -117,13 +118,7 @@ export function GamePlayScreen() {
   );
 
   if (!isReady || sessionWords.length === 0) {
-    return (
-      <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p style={{ fontSize: 'var(--font-size-lg)', color: 'var(--color-text-light)' }}>
-          准备中...
-        </p>
-      </div>
-    );
+    return <LoadingSpinner message="准备中..." />;
   }
 
   const modeNames: Record<string, string> = {

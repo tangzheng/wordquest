@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import type { Word, AnswerResult } from '@/types';
 import { useTTS } from '@/hooks/useTTS';
 import { useSound } from '@/hooks/useSound';
+import { useHaptics } from '@/hooks/useHaptics';
 import { shuffle } from '@/utils/shuffle';
 
 interface MatchCard {
@@ -29,10 +30,20 @@ export function WordMatching({ words, onComplete }: WordMatchingProps) {
   const [totalFlips, setTotalFlips] = useState(0);
   const [isProcessing, setIsProcessing] = useState(false);
   const [answers, setAnswers] = useState<AnswerResult[]>([]);
+  const [showCelebrate, setShowCelebrate] = useState(false);
   const startTimeRef = useRef(Date.now());
   const pairStartTimeRef = useRef(Date.now());
   const { speak } = useTTS();
   const { play } = useSound();
+  const { triggerSuccess } = useHaptics();
+
+  // Reset celebrate animation after it plays
+  useEffect(() => {
+    if (showCelebrate) {
+      const timer = setTimeout(() => setShowCelebrate(false), 400);
+      return () => clearTimeout(timer);
+    }
+  }, [showCelebrate]);
 
   // Initialize cards
   useEffect(() => {
@@ -89,6 +100,8 @@ export function WordMatching({ words, onComplete }: WordMatchingProps) {
           // Match!
           setTimeout(() => {
             play('match');
+            triggerSuccess();
+            setShowCelebrate(true);
             const englishCard = card1.type === 'english' ? card1 : card2;
             speak(englishCard.content);
 
@@ -166,6 +179,7 @@ export function WordMatching({ words, onComplete }: WordMatchingProps) {
 
   return (
     <div
+      className={showCelebrate ? 'animate-celebrate' : undefined}
       style={{
         flex: 1,
         display: 'flex',

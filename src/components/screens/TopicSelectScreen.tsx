@@ -8,6 +8,7 @@ import { Card } from '@/components/ui/Card';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { Button } from '@/components/ui/Button';
 import { TopBar } from '@/components/layout/TopBar';
+import { EmptyState } from '@/components/ui/EmptyState';
 
 const TOPICS_PER_PAGE = 6;
 
@@ -38,6 +39,20 @@ export function TopicSelectScreen() {
   const getTopicWordCount = (topicId: string) => {
     return getWordsByTopic(topicId).length;
   };
+
+  // Show empty state if no topics available
+  if (availableTopics.length === 0) {
+    return (
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <TopBar title="📚 选择主题" />
+        <EmptyState
+          emoji="📚"
+          title="暂无主题"
+          description="稍后再来看看有什么新内容吧！"
+        />
+      </div>
+    );
+  }
 
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>

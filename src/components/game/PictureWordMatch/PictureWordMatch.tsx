@@ -6,7 +6,10 @@ import { generateDistractors } from '@/engine/distractorGenerator';
 import { allWords } from '@/data/words';
 import { useTTS } from '@/hooks/useTTS';
 import { useSound } from '@/hooks/useSound';
+import { useHaptics } from '@/hooks/useHaptics';
 import { shuffle } from '@/utils/shuffle';
+
+const ENCOURAGING_MESSAGES = ['再试试！', '加油！', '你可以的！', '动动脑筋！', '别急，慢慢来！'];
 
 interface PictureWordMatchProps {
   words: Word[];
@@ -24,10 +27,15 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
   const [showPlusOne, setShowPlusOne] = useState(false);
   const [plusOneKey, setPlusOneKey] = useState(0);
   const [attempts, setAttempts] = useState(0);
+  const [encouragement, setEncouragement] = useState<string | null>(null);
+  const [showCelebrate, setShowCelebrate] = useState(false);
+  const [milestoneMessage, setMilestoneMessage] = useState<string | null>(null);
+  const lastMilestoneRef = useRef<number>(0);
   const startTimeRef = useRef(Date.now());
   const debounceRef = useRef(false);
   const { speak } = useTTS();
   const { play } = useSound();
+  const { triggerSuccess } = useHaptics();
 
   const currentWord = words[currentIndex];
   const isLastWord = currentIndex >= words.length - 1;
@@ -43,6 +51,9 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
     setWrongIds(new Set());
     setIsRevealing(false);
     setAttempts(0);
+    setEncouragement(null);
+    setShowCelebrate(false);
+    setMilestoneMessage(null);
     startTimeRef.current = Date.now();
     debounceRef.current = false;
   }, [currentIndex, currentWord]);
@@ -62,7 +73,9 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
         setCorrectId(option.id);
         setShowPlusOne(true);
         setPlusOneKey((k) => k + 1);
+        setShowCelebrate(true);
         play('correct');
+        triggerSuccess();
         speak(currentWord.english);
 
         const answer: AnswerResult = {
@@ -73,6 +86,23 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
         };
         const newAnswers = [...answers, answer];
         setAnswers(newAnswers);
+
+        // Check for milestone
+        const newIndex = currentIndex + 1;
+        const progress = newIndex / words.length;
+        const milestones = [
+          { threshold: 0.25, message: '25%！加油！' },
+          { threshold: 0.5, message: '50%！继续！' },
+          { threshold: 0.75, message: '75%！快完成了！' },
+          { threshold: 1, message: '100%！太棒了！🎉' },
+        ];
+        for (const m of milestones) {
+          if (progress >= m.threshold && lastMilestoneRef.current < m.threshold) {
+            lastMilestoneRef.current = m.threshold;
+            setMilestoneMessage(m.message);
+            break;
+          }
+        }
 
         // Move to next after delay
         setTimeout(() => {
@@ -85,6 +115,10 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
       } else {
         setWrongIds((prev) => new Set(prev).add(option.id));
         play('wrong');
+
+        // Show encouraging message before revealing
+        const msg = ENCOURAGING_MESSAGES[Math.floor(Math.random() * ENCOURAGING_MESSAGES.length)];
+        setEncouragement(msg);
 
         // After 1 wrong attempt, reveal correct answer
         if (newAttempts >= 1) {
@@ -119,6 +153,7 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
 
   return (
     <div
+      className={showCelebrate ? 'animate-celebrate' : undefined}
       style={{
         flex: 1,
         display: 'flex',
@@ -172,6 +207,27 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
         </span>
       </div>
 
+      {/* Milestone celebration */}
+      <AnimatePresence>
+        {milestoneMessage && (
+          <motion.div
+            key={milestoneMessage}
+            initial={{ opacity: 0, scale: 0.5, y: -20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.5, y: -20 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'var(--font-size-xl)',
+              color: 'var(--color-primary)',
+              textAlign: 'center',
+            }}
+          >
+            {milestoneMessage}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Image */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -213,6 +269,27 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
             </motion.div>
           )}
         </motion.div>
+
+        {/* Encouraging message */}
+        <AnimatePresence>
+          {encouragement && !isRevealing && (
+            <motion.div
+              key={encouragement}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: 'var(--font-size-xl)',
+                color: 'var(--color-warning)',
+                marginTop: 'var(--space-sm)',
+              }}
+            >
+              {encouragement}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </AnimatePresence>
 
       {/* Options 2x2 grid */}

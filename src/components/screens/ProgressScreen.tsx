@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { useGameStore } from '@/store/useGameStore';
 import { TOPICS } from '@/data/topics';
 import { getWordsByTopic, allWords } from '@/data/words';
@@ -6,6 +7,7 @@ import { ALL_BADGES } from '@/engine/badges';
 import { TopBar } from '@/components/layout/TopBar';
 import { Card } from '@/components/ui/Card';
 import { ProgressBar } from '@/components/ui/ProgressBar';
+import { EmptyState } from '@/components/ui/EmptyState';
 
 const staggerItem = {
   initial: { opacity: 0, y: 20 },
@@ -13,6 +15,7 @@ const staggerItem = {
 };
 
 export function ProgressScreen() {
+  const navigate = useNavigate();
   const wordMastery = useGameStore((s) => s.wordMastery);
   const totalStars = useGameStore((s) => s.totalStars);
   const badges = useGameStore((s) => s.badges);
@@ -21,6 +24,25 @@ export function ProgressScreen() {
   const totalLearned = Object.keys(wordMastery).length;
   const totalWords = allWords.length;
   const overallProgress = totalWords > 0 ? Math.round((totalLearned / totalWords) * 100) : 0;
+
+  // Show empty state when no words learned yet
+  if (totalLearned === 0) {
+    return (
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <TopBar title="📊 我的进度" />
+        <EmptyState
+          emoji="🌱"
+          title="开始学习"
+          description="完成一些游戏来开始你的单词之旅吧！"
+          action={{
+            label: '开始学习 🚀',
+            onClick: () => navigate('/topics'),
+            color: 'var(--color-primary)',
+          }}
+        />
+      </div>
+    );
+  }
 
   return (
     <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>

@@ -39,7 +39,7 @@ export function ResultsScreen() {
     }
   }, []); // Only on mount
 
-  // Confetti burst for 2+ stars (bigger for 3 stars, smaller for 2)
+  // Confetti burst for stars (bigger for 3 stars, smaller for 2, subtle for 1)
   useEffect(() => {
     if (state?.stars === 3) {
       const timer = setTimeout(() => {
@@ -60,6 +60,17 @@ export function ResultsScreen() {
           colors: ['#FFE66D', '#51CF66', '#4ECDC4'],
         });
       }, 600);
+      return () => clearTimeout(timer);
+    } else if (state?.stars === 1) {
+      // Subtle confetti for 1 star to celebrate partial completion
+      const timer = setTimeout(() => {
+        confetti({
+          particleCount: 20,
+          spread: 40,
+          origin: { y: 0.4 },
+          colors: ['#FFE66D', '#4ECDC4'],
+        });
+      }, 800);
       return () => clearTimeout(timer);
     }
   }, [state?.stars]);
@@ -107,13 +118,7 @@ export function ResultsScreen() {
         }}
       >
         {/* Stars */}
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ type: 'spring', stiffness: 200, damping: 15, delay: 0.2 }}
-        >
-          <StarRating stars={stars} size={48} />
-        </motion.div>
+        <StarRating stars={stars} size={48} />
 
         {/* Message */}
         <motion.h2
@@ -138,7 +143,7 @@ export function ResultsScreen() {
         >
           <Card style={{ textAlign: 'center' }}>
             <div style={{ display: 'flex', gap: 'var(--space-xl)', justifyContent: 'center' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', minWidth: '56px' }}>
                 <div
                   style={{
                     width: '48px',
@@ -158,7 +163,7 @@ export function ResultsScreen() {
                   正确
                 </div>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', minWidth: '56px' }}>
                 <div
                   style={{
                     width: '48px',
@@ -178,7 +183,7 @@ export function ResultsScreen() {
                   正确率
                 </div>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', minWidth: '56px' }}>
                 <div
                   style={{
                     width: '48px',

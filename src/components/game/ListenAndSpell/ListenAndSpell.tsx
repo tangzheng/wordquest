@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import type { Word, AnswerResult } from '@/types';
 import { useTTS } from '@/hooks/useTTS';
 import { useSound } from '@/hooks/useSound';
+import { useHaptics } from '@/hooks/useHaptics';
 import { generateDistractorLetters } from '@/engine/distractorGenerator';
 import { shuffle } from '@/utils/shuffle';
 import { Button } from '@/components/ui/Button';
@@ -35,6 +36,7 @@ export function ListenAndSpell({ words, onComplete }: ListenAndSpellProps) {
   const hintTimer2 = useRef<ReturnType<typeof setTimeout>>(undefined);
   const { speak, speakTwice } = useTTS();
   const { play } = useSound();
+  const { triggerSuccess } = useHaptics();
 
   const currentWord = words[currentIndex];
   const isLastWord = currentIndex >= words.length - 1;
@@ -187,6 +189,7 @@ export function ListenAndSpell({ words, onComplete }: ListenAndSpellProps) {
     if (correct) {
       setIsCorrect(true);
       play('correct');
+      triggerSuccess();
       speak(currentWord.english);
 
       const answer: AnswerResult = {
