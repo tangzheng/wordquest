@@ -9,6 +9,7 @@ const LEVELS: { id: Level; nameEn: string; nameCn: string; emoji: string; color:
   { id: 'starters', nameEn: 'Starters', nameCn: '入门级', emoji: '🌱', color: 'var(--color-starters)' },
   { id: 'movers', nameEn: 'Movers', nameCn: '提高级', emoji: '🚀', color: 'var(--color-movers)' },
   { id: 'flyers', nameEn: 'Flyers', nameCn: '飞跃级', emoji: '✈️', color: 'var(--color-flyers)' },
+  { id: 'ket', nameEn: 'KET', nameCn: 'KET备考', emoji: '📝', color: 'var(--color-ket)' },
 ];
 
 const FLOATING_DECORATIONS = [
