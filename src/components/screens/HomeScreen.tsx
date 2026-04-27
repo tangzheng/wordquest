@@ -138,7 +138,7 @@ export function HomeScreen() {
         >
           选择级别
         </p>
-        <div style={{ display: 'flex', gap: 'var(--space-sm)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 'var(--space-sm)' }}>
           {LEVELS.map((level, i) => {
             const isSelected = currentLevel === level.id;
             return (
@@ -147,7 +147,6 @@ export function HomeScreen() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * i }}
-                style={{ flex: 1 }}
               >
                 <Card
                   onClick={() => setLevel(level.id)}
