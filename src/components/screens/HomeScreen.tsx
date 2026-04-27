@@ -173,23 +173,11 @@ export function HomeScreen() {
         </div>
       </div>
 
-      {/* Alphabet Learning Button */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.35 }}
-        style={{ zIndex: 1 }}
-      >
-        <Button onClick={() => navigate('/alphabet')} size="large" color="#9B59B6">
-          🔤 字母学习
-        </Button>
-      </motion.div>
-
       {/* Start Button */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4 }}
+        transition={{ delay: 0.35 }}
         style={{ zIndex: 1 }}
       >
         <Button onClick={handleStart} size="large" color="var(--color-primary)">
