@@ -6,6 +6,7 @@ const LEVEL_ORDER: Record<Level, number> = {
   starters: 1,
   movers: 2,
   flyers: 3,
+  ket: 4,
 };
 
 interface SelectionConfig {

@@ -1,4 +1,4 @@
-export type Level = 'starters' | 'movers' | 'flyers';
+export type Level = 'starters' | 'movers' | 'flyers' | 'ket';
 
 export interface Word {
   id: string;

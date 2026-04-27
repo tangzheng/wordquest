@@ -32,6 +32,20 @@ import technologyData from './technology.json';
 import jobsData from './jobs.json';
 import beachData from './beach.json';
 import campingData from './camping.json';
+// KET Vocabulary
+import ketPeopleData from './ket-people.json';
+import ketFoodData from './ket-food.json';
+import ketDrinksData from './ket-drinks.json';
+import ketPlacesData from './ket-places.json';
+import ketTravelData from './ket-travel.json';
+import ketEntertainmentData from './ket-entertainment.json';
+import ketShoppingData from './ket-shopping.json';
+import ketHealthData from './ket-health.json';
+import ketSportData from './ket-sport.json';
+import ketEducationData from './ket-education.json';
+import ketWorkData from './ket-work.json';
+import ketNatureData from './ket-nature.json';
+import ketCommunicationData from './ket-communication.json';
 import type { Word } from '@/types';
 
 interface WordDataFile {
@@ -78,6 +92,20 @@ export const allWords: Word[] = [
   ...loadTopic(jobsData as WordDataFile),
   ...loadTopic(beachData as WordDataFile),
   ...loadTopic(campingData as WordDataFile),
+  // KET Vocabulary
+  ...loadTopic(ketPeopleData as WordDataFile),
+  ...loadTopic(ketFoodData as WordDataFile),
+  ...loadTopic(ketDrinksData as WordDataFile),
+  ...loadTopic(ketPlacesData as WordDataFile),
+  ...loadTopic(ketTravelData as WordDataFile),
+  ...loadTopic(ketEntertainmentData as WordDataFile),
+  ...loadTopic(ketShoppingData as WordDataFile),
+  ...loadTopic(ketHealthData as WordDataFile),
+  ...loadTopic(ketSportData as WordDataFile),
+  ...loadTopic(ketEducationData as WordDataFile),
+  ...loadTopic(ketWorkData as WordDataFile),
+  ...loadTopic(ketNatureData as WordDataFile),
+  ...loadTopic(ketCommunicationData as WordDataFile),
 ];
 
 export function getWordsByTopic(topicId: string): Word[] {

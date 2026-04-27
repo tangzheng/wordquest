@@ -225,6 +225,175 @@ export const TOPICS: TopicMeta[] = [
       requirement: { masteredWords: 8, minStars: 2 },
     },
   },
+  // KET Topics
+  {
+    id: 'ket-people',
+    nameEn: 'People',
+    nameCn: '人物',
+    icon: '👥',
+    color: '#E91E63',
+    levels: ['ket'],
+    badge: {
+      name: 'People Pro',
+      nameCn: '人物达人',
+      icon: '🏆👥',
+      requirement: { masteredWords: 20, minStars: 2 },
+    },
+  },
+  {
+    id: 'ket-places',
+    nameEn: 'Places',
+    nameCn: '地点',
+    icon: '🏙️',
+    color: '#3F51B5',
+    levels: ['ket'],
+    badge: {
+      name: 'Explorer',
+      nameCn: '探险家',
+      icon: '🏆🏙️',
+      requirement: { masteredWords: 20, minStars: 2 },
+    },
+  },
+  {
+    id: 'ket-food',
+    nameEn: 'Food & Drink',
+    nameCn: '饮食',
+    icon: '🍔',
+    color: '#FF5722',
+    levels: ['ket'],
+    badge: {
+      name: 'Food Master',
+      nameCn: '美食大师',
+      icon: '🏆🍔',
+      requirement: { masteredWords: 25, minStars: 2 },
+    },
+  },
+  {
+    id: 'ket-entertainment',
+    nameEn: 'Entertainment',
+    nameCn: '娱乐',
+    icon: '🎬',
+    color: '#9C27B0',
+    levels: ['ket'],
+    badge: {
+      name: 'Entertainment Pro',
+      nameCn: '娱乐高手',
+      icon: '🏆🎬',
+      requirement: { masteredWords: 15, minStars: 2 },
+    },
+  },
+  {
+    id: 'ket-shopping',
+    nameEn: 'Shopping',
+    nameCn: '购物',
+    icon: '🛍️',
+    color: '#E91E63',
+    levels: ['ket'],
+    badge: {
+      name: 'Shopping Star',
+      nameCn: '购物之星',
+      icon: '🏆🛍️',
+      requirement: { masteredWords: 15, minStars: 2 },
+    },
+  },
+  {
+    id: 'ket-health',
+    nameEn: 'Health',
+    nameCn: '健康',
+    icon: '🏥',
+    color: '#F44336',
+    levels: ['ket'],
+    badge: {
+      name: 'Health Expert',
+      nameCn: '健康专家',
+      icon: '🏆🏥',
+      requirement: { masteredWords: 15, minStars: 2 },
+    },
+  },
+  {
+    id: 'ket-sport',
+    nameEn: 'Sport',
+    nameCn: '运动',
+    icon: '⚽',
+    color: '#4CAF50',
+    levels: ['ket'],
+    badge: {
+      name: 'Sports Champion',
+      nameCn: '运动冠军',
+      icon: '🏆⚽',
+      requirement: { masteredWords: 15, minStars: 2 },
+    },
+  },
+  {
+    id: 'ket-travel',
+    nameEn: 'Travel',
+    nameCn: '旅行',
+    icon: '✈️',
+    color: '#00BCD4',
+    levels: ['ket'],
+    badge: {
+      name: 'Travel Expert',
+      nameCn: '旅行专家',
+      icon: '🏆✈️',
+      requirement: { masteredWords: 20, minStars: 2 },
+    },
+  },
+  {
+    id: 'ket-education',
+    nameEn: 'Education',
+    nameCn: '教育',
+    icon: '📚',
+    color: '#795548',
+    levels: ['ket'],
+    badge: {
+      name: 'Scholar',
+      nameCn: '学者',
+      icon: '🏆📚',
+      requirement: { masteredWords: 15, minStars: 2 },
+    },
+  },
+  {
+    id: 'ket-work',
+    nameEn: 'Work & Business',
+    nameCn: '工作商务',
+    icon: '💼',
+    color: '#607D8B',
+    levels: ['ket'],
+    badge: {
+      name: 'Business Pro',
+      nameCn: '商务达人',
+      icon: '🏆💼',
+      requirement: { masteredWords: 15, minStars: 2 },
+    },
+  },
+  {
+    id: 'ket-nature',
+    nameEn: 'Nature',
+    nameCn: '自然',
+    icon: '🌳',
+    color: '#8BC34A',
+    levels: ['ket'],
+    badge: {
+      name: 'Nature Lover',
+      nameCn: '自然爱好者',
+      icon: '🏆🌳',
+      requirement: { masteredWords: 15, minStars: 2 },
+    },
+  },
+  {
+    id: 'ket-communication',
+    nameEn: 'Communication',
+    nameCn: '沟通',
+    icon: '💬',
+    color: '#2196F3',
+    levels: ['ket'],
+    badge: {
+      name: 'Communicator',
+      nameCn: '沟通达人',
+      icon: '🏆💬',
+      requirement: { masteredWords: 15, minStars: 2 },
+    },
+  },
 ];
 
 export function getTopicById(id: string): TopicMeta | undefined {
@@ -232,5 +401,5 @@ export function getTopicById(id: string): TopicMeta | undefined {
 }
 
 export function getTopicsByLevel(level: string): TopicMeta[] {
-  return TOPICS.filter(t => t.levels.includes(level as 'starters' | 'movers' | 'flyers'));
+  return TOPICS.filter(t => t.levels.includes(level as 'starters' | 'movers' | 'flyers' | 'ket'));
 }

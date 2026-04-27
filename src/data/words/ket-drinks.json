@@ -1,0 +1,125 @@
+{
+  "topic": "ket-food",
+  "words": [
+    {
+      "id": "ket_food_water",
+      "english": "water",
+      "chinese": "水",
+      "emoji": "💧",
+      "emojiAlt": [],
+      "level": "ket",
+      "phonetic": "/ˈwɔːtə/",
+      "tags": ["drink"],
+      "letterCount": 5,
+      "frequency": 1
+    },
+    {
+      "id": "ket_food_milk",
+      "english": "milk",
+      "chinese": "牛奶",
+      "emoji": "🥛",
+      "emojiAlt": [],
+      "level": "ket",
+      "phonetic": "/mɪlk/",
+      "tags": ["drink"],
+      "letterCount": 4,
+      "frequency": 1
+    },
+    {
+      "id": "ket_food_juice",
+      "english": "juice",
+      "chinese": "果汁",
+      "emoji": "🧃",
+      "emojiAlt": [],
+      "level": "ket",
+      "phonetic": "/dʒuːs/",
+      "tags": ["drink", "sweet"],
+      "letterCount": 5,
+      "frequency": 1
+    },
+    {
+      "id": "ket_food_coffee",
+      "english": "coffee",
+      "chinese": "咖啡",
+      "emoji": "☕",
+      "emojiAlt": [],
+      "level": "ket",
+      "phonetic": "/ˈkɒfi/",
+      "tags": ["drink", "hot"],
+      "letterCount": 6,
+      "frequency": 1
+    },
+    {
+      "id": "ket_food_tea",
+      "english": "tea",
+      "chinese": "茶",
+      "emoji": "🍵",
+      "emojiAlt": [],
+      "level": "ket",
+      "phonetic": "/tiː/",
+      "tags": ["drink", "hot"],
+      "letterCount": 3,
+      "frequency": 1
+    },
+    {
+      "id": "ket_food_cola",
+      "english": "cola",
+      "chinese": "可乐",
+      "emoji": "🥤",
+      "emojiAlt": [],
+      "level": "ket",
+      "phonetic": "/ˈkəʊlə/",
+      "tags": ["drink", "sweet", "cold"],
+      "letterCount": 4,
+      "frequency": 2
+    },
+    {
+      "id": "ket_food_lemonade",
+      "english": "lemonade",
+      "chinese": "柠檬水",
+      "emoji": "🍋",
+      "emojiAlt": [],
+      "level": "ket",
+      "phonetic": "/ˌleməˈneɪd/",
+      "tags": ["drink", "sweet"],
+      "letterCount": 8,
+      "frequency": 3
+    },
+    {
+      "id": "ket_food_wine",
+      "english": "wine",
+      "chinese": "葡萄酒",
+      "emoji": "🍷",
+      "emojiAlt": [],
+      "level": "ket",
+      "phonetic": "/waɪn/",
+      "tags": ["drink", "alcohol"],
+      "letterCount": 4,
+      "frequency": 2
+    },
+    {
+      "id": "ket_food_beer",
+      "english": "beer",
+      "chinese": "啤酒",
+      "emoji": "🍺",
+      "emojiAlt": [],
+      "level": "ket",
+      "phonetic": "/bɪə/",
+      "tags": ["drink", "alcohol"],
+      "letterCount": 4,
+      "frequency": 2
+    },
+    {
+      "id": "ket_food_yogurt",
+      "english": "yogurt",
+      "chinese": "酸奶",
+      "emoji": "🥛",
+      "emojiAlt": [],
+      "level": "ket",
+      "phonetic": "/ˈjɒɡət/",
+      "tags": ["drink", "dairy"],
+      "letterCount": 6,
+      "frequency": 3
+    }
+  ]
+}
