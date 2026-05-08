@@ -23,12 +23,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'none'
 
       - name: Install dependencies
         run: |
           npm cache clean --force
           rm -rf node_modules .vite
-          npm install --legacy-peer-deps
+          npm ci --legacy-peer-deps
 
       - name: Build
         env:
