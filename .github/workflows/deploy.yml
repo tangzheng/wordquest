@@ -31,7 +31,7 @@ jobs:
           npm install --force --legacy-peer-deps
 
       - name: Clear Vite cache
-        run: rm -rf /root/.npm/_vite /home/runner/.cache/vite
+        run: rm -rf /root/.npm/_vite /home/runner/.cache/vite || true
 
       - name: Build
         env:
