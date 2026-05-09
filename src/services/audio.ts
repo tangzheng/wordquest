@@ -22,7 +22,7 @@ class AudioService {
   private getContext(): AudioContext | null {
     if (!this.ctx) {
       try {
-        this.ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
+        this.ctx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
       } catch {
         return null;
       }

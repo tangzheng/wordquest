@@ -2,6 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { Level, WordMastery, DailyStreak, UserSettings } from '@/types';
 import { todayStr, isYesterday, isDaysBefore, addDays } from '@/utils/date';
+import { syncToRemote, loadFromRemote } from '@/services/userDatabase';
 
 const LEITNER_INTERVALS = [0, 0, 1, 3, 7, 14]; // box 0 unused, boxes 1-5
 
@@ -14,6 +15,10 @@ interface GameStore {
   dailyStreak: DailyStreak;
   settings: UserSettings;
 
+  // Sync state
+  isSyncing: boolean;
+  lastSyncedAt: number | null;
+
   // Actions
   setLevel: (level: Level) => void;
   updateMastery: (wordId: string, correct: boolean) => void;
@@ -22,6 +27,10 @@ interface GameStore {
   updateStreak: () => void;
   updateSettings: (partial: Partial<UserSettings>) => void;
   resetProgress: () => void;
+
+  // Sync actions (call with userId when authenticated)
+  syncToRemote: (userId: string) => Promise<void>;
+  loadFromRemote: (userId: string) => Promise<boolean>;
 }
 
 export const useGameStore = create<GameStore>()(
@@ -38,6 +47,8 @@ export const useGameStore = create<GameStore>()(
         speechRate: 0.8,
         showChinese: true,
       },
+      isSyncing: false,
+      lastSyncedAt: null,
 
       setLevel: (level) => set({ currentLevel: level }),
 
@@ -159,6 +170,41 @@ export const useGameStore = create<GameStore>()(
           badges: [],
           dailyStreak: { current: 0, lastPlayDate: '', graceDaysUsed: 0 },
         }),
+
+      syncToRemote: async (userId) => {
+        if (get().isSyncing) return;
+        set({ isSyncing: true });
+        try {
+          const state = get();
+          await syncToRemote(userId, {
+            currentLevel: state.currentLevel,
+            wordMastery: state.wordMastery,
+            totalStars: state.totalStars,
+            badges: state.badges,
+            dailyStreak: state.dailyStreak,
+            settings: state.settings,
+          });
+          set({ lastSyncedAt: Date.now() });
+        } finally {
+          set({ isSyncing: false });
+        }
+      },
+
+      loadFromRemote: async (userId) => {
+        const remoteState = await loadFromRemote(userId);
+        if (!remoteState) return false;
+
+        set({
+          currentLevel: remoteState.currentLevel,
+          wordMastery: remoteState.wordMastery,
+          totalStars: remoteState.totalStars,
+          badges: remoteState.badges,
+          dailyStreak: remoteState.dailyStreak,
+          settings: remoteState.settings,
+          lastSyncedAt: Date.now(),
+        });
+        return true;
+      },
     }),
     { name: 'wordquest-game-store' }
   )

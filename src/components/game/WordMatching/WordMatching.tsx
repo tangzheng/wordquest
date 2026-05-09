@@ -31,8 +31,8 @@ export function WordMatching({ words, onComplete }: WordMatchingProps) {
   const [isProcessing, setIsProcessing] = useState(false);
   const [answers, setAnswers] = useState<AnswerResult[]>([]);
   const [showCelebrate, setShowCelebrate] = useState(false);
-  const startTimeRef = useRef(Date.now());
-  const pairStartTimeRef = useRef(Date.now());
+  const startTimeRef = useRef<number>(0);
+  const pairStartTimeRef = useRef<number>(0);
   const { speak } = useTTS();
   const { play } = useSound();
   const { triggerSuccess } = useHaptics();

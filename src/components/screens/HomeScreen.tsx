@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useGameStore } from '@/store/useGameStore';
+import { useAuthStore } from '@/store/useAuthStore';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import type { Level } from '@/types';
@@ -27,10 +28,20 @@ export function HomeScreen() {
   const totalStars = useGameStore((s) => s.totalStars);
   const streak = useGameStore((s) => s.dailyStreak.current);
   const updateStreak = useGameStore((s) => s.updateStreak);
+  const user = useAuthStore((s) => s.user);
+  const signOut = useAuthStore((s) => s.signOut);
 
   const handleStart = () => {
     updateStreak();
     navigate('/topics');
+  };
+
+  const handleAuth = () => {
+    navigate('/auth');
+  };
+
+  const handleSignOut = async () => {
+    await signOut();
   };
 
   return (
@@ -185,41 +196,80 @@ export function HomeScreen() {
         </Button>
       </motion.div>
 
-      {/* Bottom links */}
+      {/* Bottom links / Auth */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
-        style={{ display: 'flex', gap: 'var(--space-xl)', zIndex: 1 }}
+        style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'var(--space-md)', zIndex: 1 }}
       >
-        <Button
-          onClick={() => navigate('/progress')}
-          color="transparent"
-          textColor="var(--color-text-light)"
-          style={{
-            boxShadow: 'none',
-            fontSize: 'var(--font-size-md)',
-            backgroundColor: 'rgba(0,0,0,0.05)',
-            borderRadius: '20px',
-            padding: '8px 20px',
-          }}
-        >
-          📊 进度
-        </Button>
-        <Button
-          onClick={() => navigate('/settings')}
-          color="transparent"
-          textColor="var(--color-text-light)"
-          style={{
-            boxShadow: 'none',
-            fontSize: 'var(--font-size-md)',
-            backgroundColor: 'rgba(0,0,0,0.05)',
-            borderRadius: '20px',
-            padding: '8px 20px',
-          }}
-        >
-          ⚙️ 设置
-        </Button>
+        {user ? (
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-md)' }}>
+            <span style={{ fontSize: 'var(--font-size-sm)', color: 'var(--color-text-light)' }}>
+              {user.email}
+            </span>
+            <Button
+              onClick={handleSignOut}
+              color="transparent"
+              textColor="var(--color-text-light)"
+              style={{
+                boxShadow: 'none',
+                fontSize: 'var(--font-size-sm)',
+                backgroundColor: 'rgba(0,0,0,0.05)',
+                borderRadius: '16px',
+                padding: '6px 16px',
+              }}
+            >
+              退出
+            </Button>
+          </div>
+        ) : (
+          <Button
+            onClick={handleAuth}
+            color="transparent"
+            textColor="var(--color-primary)"
+            style={{
+              boxShadow: 'none',
+              fontSize: 'var(--font-size-md)',
+              backgroundColor: 'rgba(255, 107, 107, 0.1)',
+              borderRadius: '20px',
+              padding: '8px 20px',
+            }}
+          >
+            🔐 登录 / 注册
+          </Button>
+        )}
+
+        <div style={{ display: 'flex', gap: 'var(--space-xl)' }}>
+          <Button
+            onClick={() => navigate('/progress')}
+            color="transparent"
+            textColor="var(--color-text-light)"
+            style={{
+              boxShadow: 'none',
+              fontSize: 'var(--font-size-md)',
+              backgroundColor: 'rgba(0,0,0,0.05)',
+              borderRadius: '20px',
+              padding: '8px 20px',
+            }}
+          >
+            📊 进度
+          </Button>
+          <Button
+            onClick={() => navigate('/settings')}
+            color="transparent"
+            textColor="var(--color-text-light)"
+            style={{
+              boxShadow: 'none',
+              fontSize: 'var(--font-size-md)',
+              backgroundColor: 'rgba(0,0,0,0.05)',
+              borderRadius: '20px',
+              padding: '8px 20px',
+            }}
+          >
+            ⚙️ 设置
+          </Button>
+        </div>
       </motion.div>
     </div>
   );

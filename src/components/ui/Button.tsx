@@ -9,6 +9,8 @@ interface ButtonProps {
   size?: 'normal' | 'large';
   disabled?: boolean;
   fullWidth?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+  loading?: boolean;
   style?: CSSProperties;
 }
 
@@ -20,14 +22,17 @@ export function Button({
   size = 'normal',
   disabled = false,
   fullWidth = false,
+  type = 'button',
+  loading = false,
   style,
 }: ButtonProps) {
   const isLarge = size === 'large';
 
   return (
     <motion.button
+      type={type}
       onClick={onClick}
-      disabled={disabled}
+      disabled={disabled || loading}
       whileTap={{ scale: 0.93, y: 2, filter: 'brightness(0.92)', boxShadow: '0 2px 0 rgba(0,0,0,0.2)' }}
       whileHover={{ scale: 1.03 }}
       style={{

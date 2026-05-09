@@ -20,7 +20,6 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<AnswerResult[]>([]);
   const [options, setOptions] = useState<Word[]>([]);
-  const [_selectedId, setSelectedId] = useState<string | null>(null);
   const [correctId, setCorrectId] = useState<string | null>(null);
   const [wrongIds, setWrongIds] = useState<Set<string>>(new Set());
   const [isRevealing, setIsRevealing] = useState(false);
@@ -31,7 +30,7 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
   const [showCelebrate, setShowCelebrate] = useState(false);
   const [milestoneMessage, setMilestoneMessage] = useState<string | null>(null);
   const lastMilestoneRef = useRef<number>(0);
-  const startTimeRef = useRef(Date.now());
+  const startTimeRef = useRef<number>(0);
   const debounceRef = useRef(false);
   const { speak } = useTTS();
   const { play } = useSound();
@@ -46,7 +45,6 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
     const distractors = generateDistractors(currentWord, allWords, 3);
     const opts = shuffle([currentWord, ...distractors]);
     setOptions(opts);
-    setSelectedId(null);
     setCorrectId(null);
     setWrongIds(new Set());
     setIsRevealing(false);
@@ -69,7 +67,6 @@ export function PictureWordMatch({ words, onComplete }: PictureWordMatchProps) {
       setAttempts(newAttempts);
 
       if (isCorrect) {
-        setSelectedId(option.id);
         setCorrectId(option.id);
         setShowPlusOne(true);
         setPlusOneKey((k) => k + 1);

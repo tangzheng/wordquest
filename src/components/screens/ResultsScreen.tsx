@@ -27,17 +27,9 @@ export function ResultsScreen() {
   const navigate = useNavigate();
   const state = location.state as ResultsState | undefined;
 
-  // Badge unlock queue
-  const [badgeQueue, setBadgeQueue] = useState<string[]>([]);
-  const [currentBadge, setCurrentBadge] = useState<string | null>(null);
-
-  useEffect(() => {
-    const newBadges = state?.newBadges;
-    if (newBadges && newBadges.length > 0) {
-      setBadgeQueue(newBadges.slice(1));
-      setCurrentBadge(newBadges[0]);
-    }
-  }, []); // Only on mount
+  // Badge unlock queue - initialized directly, no useEffect needed
+  const [badgeQueue, setBadgeQueue] = useState<string[]>(state?.newBadges?.slice(1) ?? []);
+  const [currentBadge, setCurrentBadge] = useState<string | null>(state?.newBadges?.[0] ?? null);
 
   // Confetti burst for stars (bigger for 3 stars, smaller for 2, subtle for 1)
   useEffect(() => {
@@ -220,7 +212,7 @@ export function ResultsScreen() {
           {answers.map((answer, i) => {
             if (isAlphabet) {
               // Alphabet mode: answer has letterId
-              const letterId = (answer as any).letterId;
+              const letterId = (answer as AnswerResult & { letterId?: string }).letterId;
               const letter = ALPHABET_DATA.find((l) => l.id === letterId);
               if (!letter) return null;
               return (

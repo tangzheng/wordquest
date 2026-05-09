@@ -8,6 +8,7 @@ import { ProgressScreen } from '@/components/screens/ProgressScreen';
 import { SettingsScreen } from '@/components/screens/SettingsScreen';
 import { AlphabetHomeScreen } from '@/components/screens/AlphabetHomeScreen';
 import { AlphabetPlayScreen } from '@/components/screens/AlphabetPlayScreen';
+import { AuthScreen } from '@/components/screens/AuthScreen';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/settings" element={<SettingsScreen />} />
         <Route path="/alphabet" element={<AlphabetHomeScreen />} />
         <Route path="/alphabet/:mode" element={<AlphabetPlayScreen />} />
+        <Route path="/auth" element={<AuthScreen onClose={() => window.history.back()} />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import type { GameMode, AnswerResult, Word } from '@/types';
+import type { WordMastery } from '@/types/store';
 import { allWords } from '@/data/words';
 import { getTopicById } from '@/data/topics';
 import { useGameStore } from '@/store/useGameStore';
@@ -65,9 +66,9 @@ export function GamePlayScreen() {
       const stars = calculateStars(accuracy);
       addStars(stars);
 
-      // Build preview mastery for badge checking
+      type PreviewMastery = Record<string, WordMastery & { wordId: string; box: number }>;
       // (store updates are batched, so wordMastery may not reflect updates yet)
-      const previewMastery = { ...wordMastery };
+      const previewMastery: PreviewMastery = { ...wordMastery };
       answers.forEach((answer) => {
         const existing = previewMastery[answer.wordId];
         if (!existing) {
@@ -79,15 +80,15 @@ export function GamePlayScreen() {
             correctStreak: answer.correct ? 1 : 0,
             totalAttempts: 1,
             totalCorrect: answer.correct ? 1 : 0,
-          } as any;
+          };
         } else {
           previewMastery[answer.wordId] = {
             ...existing,
-            box: answer.correct ? Math.min(existing.box + 1, 5) : 1,
+            box: answer.correct ? Math.min(existing.box + 1, 5) as 1|2|3|4|5 : 1,
             correctStreak: answer.correct ? existing.correctStreak + 1 : 0,
             totalAttempts: existing.totalAttempts + 1,
             totalCorrect: existing.totalCorrect + (answer.correct ? 1 : 0),
-          } as any;
+          };
         }
       });
 
